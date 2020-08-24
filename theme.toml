@@ -1,0 +1,7 @@
+name = "pixyll"
+description = "A simple, beautiful theme for Hugo."
+author = "Dmitriy Slupytskyi"
+license = "MIT"
+source_repo = "https://github.com/icpmoles/pyxill2"
+tags = ["blog", "personal", "search", "responsive", "minimal"]
+min_version = 0.62

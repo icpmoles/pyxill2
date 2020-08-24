@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Share</title>
+<meta http-equiv="Cache-control" content="public">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="style" type="text/css" href="https://icpmoles.github.io/css/combined-min-smart.css">
+<link rel="stylesheet" type="text/css" href="https://icpmoles.github.io/css/combined-min-smart.css">
+<style>
+html, body, h2, form {margin:0; padding:0}
+body {background:#f0eff4; text-align:center}
+body, input, h2 {color:#444; font:normal 17px/1.4em Tahoma}
+#container {margin:0 auto; max-width:800px; _width:800px; text-align:left}
+h2 {font:normal 0.9em/1.4em Tahoma; color:#686868; text-align:center; margin:1%}
+#pageinfo {padding:2% 1%; background:#fcfcfc; border:0 solid #d7d7d7; box-shadow:1px 1px 3px #ccc; margin-bottom:-6px}
+#pageinfo label {width:90px}
+#pageinfo .field {margin-left:90px; margin-top:-1.4em}
+#pageinfo input {width:99%; background:transparent; color:#0074a2; padding:0 0.5%; margin:0; border:1px solid transparent; -webkit-appearance:none}
+#pageinfo label, #pageinfo .field {padding:0.1% 0}
+#pageinfo input:hover, #pageinfo input:focus {border:1px solid #bbb; outline:0; background:#fff; box-shadow:inset 1px 1px 3px #ddd}
+#list {padding:1%; text-align:center}
+#list a {display:inline-block; text-align:left; border:1px solid #d7d7d7; background:#f8f8f8; color:#0074a2; width:29%; margin:-1px 0 0 -1px; padding:0.5em 1%; text-decoration:none; white-space:nowrap}
+#list a * {vertical-align:middle}
+#list a:hover {background:#fff}
+#list a:focus, #list a:active {background:#ffc; outline:0}
+.icon {display:inline-block; background:url(icons.png) 0 no-repeat; width:16px; height:16px; margin:0 5% 0 1%}
+#ext {display:none; text-decoration:none; position:fixed; top:0; right:0; padding:0.2em 0.3em; text-align:center; color:#999; background:#f1f1f1}
+#footer {margin-top:1em; text-align:center; font-size:0.6em; line-height:1.1em; color:#ccc}
+#footer a {color:#ccc}
+@media screen and (max-width:500px) {
+  h2 {font-size:0.7em}
+  #pageinfo {border-width:1px 0; box-shadow:none; margin:0 0 1.5em 0}
+  #list {padding:0}
+  #list a {display:block; width:auto; margin:-1px 0 0 0; border-width:1px 0}
+  #list a > .icon {margin:0 4%}
+}
+@media screen and (max-width:300px) {
+  html, body {height:100%; overflow:hidden}
+  body {overflow:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch}
+  #stl, #pageinfo {display:none}
+  #list {font-size:0.8em}
+  html, body, #list a {background:transparent; margin:0; border:0}
+  #list a > .icon {margin:0 3% 0 2%}
+  #list a:hover {background:rgba(0,0,0,0.1)}
+}
+@media screen and (max-height:150px) {/*IESW*/
+  #stl, #pageinfo, #footer {display:none}
+  #list {font-size:0.8em; padding:0; text-align:left}
+  #list a {display:inline-block; padding:1px 1% 4px 1%; text-align:center; width:auto; margin:0; border:0}
+  #list a .icon {margin:0}
+  #list a span {display:none}
+  html, body, #list a {background:transparent; overflow:hidden; border:0}
+  #list a:hover {background:rgba(0,0,0,0.1)}
+  #ext {display:block}
+  /*IESW*/
+}
+@media (prefers-color-scheme: dark) {
+ #pageinfo {background: #4C566A; body:#E5E9F0}
+ #list a {background: #4C566A; body:#E5E9F0; color: #ECEFF4}
+ body {background: #2E3440;color: #ECEFF4}
+ h2 {color:#D8DEE9}
+ #pageinfo input {color: #E5E9F0}
+}
+.flash {-webkit-animation:flash 0.5s 0 ease-in}
+@-webkit-keyframes flash {from {background:#ffb}}
+</style>
+</head>
+<body>
+  <div id="container">
+    <noscript><div style="opacity:0.5;text-align:center">Please turn on JavaScript.</div></noscript>
+    <h2 id="stl">Share this page:</h2>
+
+    <form id="pageinfo">
+      <label for="title">Page:</label>
+      <div class="field"><input type="text" id="title" size="20" placeholder="Add title..." tabindex="-1" onchange="update();"></div>
+      <label for="url">Location:</label>
+      <div class="field"><input type="url" id="url" size="30" placeholder="Add location..." tabindex="-1" onchange="update();"></div>
+    </form>
+
+    <div id="list" onclick="bye(event);"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fexpando.github.io%2F&amp;t=" target="_blank" title="Facebook"><i class="icon ico0"></i><span>Facebook</span></a><a  href="https://twitter.com/intent/tweet?url=%20-%20http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Twitter"><i class="icon ico1"></i><span>Twitter</span><a href="http://plus.google.com/share?url=" target="_blank" title="Google+"><i class="icon ico2"></i><span>Google+</span></a></a><a href="http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Fexpando.github.io%2F&amp;t=&amp;s=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Tumblr"><i class="icon ico4"></i><span>Tumblr</span></a><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fexpando.github.io%2F&amp;title=" target="_blank" title="StumbleUpon"><i class="icon ico4"></i><span>StumbleUpon</span></a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fexpando.github.io%2F&amp;title=&amp;summary=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="LinkedIn"><i class="icon ico5"></i><span>LinkedIn</span></a><a href="http://reddit.com/submit?url=http%3A%2F%2Fexpando.github.io%2F&amp;title=" target="_blank" title="Reddit"><i class="icon ico6"></i><span>Reddit</span></a><a href="http://pinterest.com/pin/create/button/?description=&amp;url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Pinterest"><i class="icon ico7"></i><span>Pinterest</span></a><a href="http://www.blogger.com/blog_this.pyra?t=&amp;u=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Blogger"><i class="icon ico8"></i><span>Blogger</span></a><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fexpando.github.io%2F&amp;title=&amp;bodytext=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Digg"><i class="icon ico9"></i><span>Digg</span></a><a href="http://delicious.com/post?url=http%3A%2F%2Fexpando.github.io%2F&amp;title=&amp;notes=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Delicious"><i class="icon ico10"></i><span>Delicious</span></a><a href="http://cgi.fark.com/cgi/fark/farkit.pl?h=&amp;u=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Fark"><i class="icon ico11"></i><span>Fark</span></a><a href="http://www.friendfeed.com/share?title=&amp;link=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Friendfeed"><i class="icon ico12"></i><span>Friendfeed</span></a><a href="http://www.myspace.com/Modules/PostTo/Pages/?u=http%3A%2F%2Fexpando.github.io%2F&amp;t=" target="_blank" title="MySpace"><i class="icon ico13"></i><span>MySpace</span></a><a href="http://www.mister-wong.com/addurl/?bm_url=http%3A%2F%2Fexpando.github.io%2F&amp;bm_description=" target="_blank" title="Mister Wong"><i class="icon ico14"></i><span>Mister Wong</span></a><a href="http://www.netvibes.com/share?title=&amp;url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="NetVibes"><i class="icon ico15"></i><span>NetVibes</span></a><a href="http://www.newsvine.com/_tools/seed&amp;save?u=http%3A%2F%2Fexpando.github.io%2F&amp;h=" target="_blank" title="NewsVine"><i class="icon ico16"></i><span>NewsVine</span></a><a href="http://www.livejournal.com/update.bml?subject=&amp;event=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="LiveJournal"><i class="icon ico17"></i><span>LiveJournal</span></a><a href="http://www.evernote.com/clip.action?url=http%3A%2F%2Fexpando.github.io%2F&amp;title=" target="_blank" title="Evernote"><i class="icon ico18"></i><span>Evernote</span></a><a href="http://share.flipboard.com/flipit/load?v=1.0&amp;url=http%3A%2F%2Fexpando.github.io%2F&amp;title=" target="_blank" title="Flipboard"><i class="icon ico19"></i><span>Flipboard</span></a><a href="http://getpocket.com/save?url=http%3A%2F%2Fexpando.github.io%2F&amp;title=" target="_blank" title="Pocket"><i class="icon ico20"></i><span>Pocket</span></a><a href="http://www.typepad.com/services/quickpost/post?v=2&amp;qp_title=&amp;qp_href=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="TypePad"><i class="icon ico21"></i><span>TypePad</span></a><a href="http://www.box.net/api/1.0/import?url=http%3A%2F%2Fexpando.github.io%2F&amp;name=&amp;description=&amp;import_as=link" target="_blank" title="Box"><i class="icon ico22"></i><span>Box</span></a><a href="http://wanelo.com/p/post?bookmarklet=&amp;source=toolbar&amp;title=&amp;url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Wanelo"><i class="icon ico23"></i><span>Wanelo</span></a><a href="http://vk.com/share.php?url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="ВКонтакте"><i class="icon ico24"></i><span>ВКонтакте</span></a><a href="http://www.draugiem.lv/say/ext/add.php?title=&amp;titlePrefix=@t&amp;link=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Draugiem.lv"><i class="icon ico25"></i><span>Draugiem.lv</span></a><a href="http://mixi.jp/share.pl?u=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="Mixi"><i class="icon ico26"></i><span>Mixi</span></a><a href="http://gree.jp/share/write?url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="GREE"><i class="icon ico27"></i><span>GREE</span></a><a href="http://bookmarks.yahoo.co.jp/bookmarklet/showpopup?t=&amp;u=http%3A%2F%2Fexpando.github.io%2F&amp;opener=bm" target="_blank" title="Yahoo!ブックマーク"><i class="icon ico28"></i><span>Yahoo!ブックマーク</span></a><a href="http://b.hatena.ne.jp/add?mode=confirm&amp;title=C&amp;url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="はてなブックマーク"><i class="icon ico29"></i><span>はてなブックマーク</span></a><a href="http://www.choix.jp/submit/?bookurl=http%3A%2F%2Fexpando.github.io%2F&amp;booktitle=&amp;phase=0" target="_blank" title="Choix"><i class="icon ico30"></i><span>Choix</span></a><a href="http://www.tuenti.com/share?url=http%3A%2F%2Fexpando.github.io%2F&amp;suggested-text=" target="_blank" title="Tuenti"><i class="icon ico31"></i><span>Tuenti</span></a><a href="http://service.weibo.com/share/share.php?title=&amp;url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="新浪微博"><i class="icon ico32"></i><span>新浪微博</span></a><a href="http://v.t.qq.com/share/share.php?title=&amp;url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="腾讯微博"><i class="icon ico33"></i><span>腾讯微博</span></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fexpando.github.io%2F&amp;title=" target="_blank" title="QQ空间"><i class="icon ico34"></i><span>QQ空间</span></a><a href="http://share.renren.com/share/buttonshare.do?title=&amp;link=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="人人网"><i class="icon ico35"></i><span>人人网</span></a><a href="http://t.163.com/article/user/checkLogin.do?link=http%3A%2F%2Fexpando.github.io%2F&amp;info=" target="_blank" title="网易微博"><i class="icon ico36"></i><span>网易微博</span></a><a href="http://cang.baidu.com/do/add?it=&amp;iu=http%3A%2F%2Fexpando.github.io%2F&amp;fr=ien" target="_blank" title="百度搜藏"><i class="icon ico37"></i><span>百度搜藏</span></a><a href="http://line.me/R/msg/text/?%20-%20http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="LINE"><i class="icon ico38"></i><span>LINE</span></a><a href="/qr.html#u=@u" target="_blank" title="QR Code"><i class="icon ico39"></i><span>QR Code</span></a><a href="http://tinyurl.com/api-create.php?url=http%3A%2F%2Fexpando.github.io%2F" target="_blank" title="TinyURL"><i class="icon ico40"></i><span>TinyURL</span></a><span> <style>.icon{background:url(icons.png) 0 no-repeat}.ico0{background-position:-0px 0}.ico1{background-position:-16px 0}.ico2{background-position:-32px 0}.ico3{background-position:-48px 0}.ico4{background-position:-64px 0}.ico5{background-position:-80px 0}.ico6{background-position:-96px 0}.ico7{background-position:-112px 0}.ico8{background-position:-128px 0}.ico9{background-position:-144px 0}.ico10{background-position:-160px 0}.ico11{background-position:-176px 0}.ico12{background-position:-192px 0}.ico13{background-position:-208px 0}.ico14{background-position:-224px 0}.ico15{background-position:-240px 0}.ico16{background-position:-256px 0}.ico17{background-position:-272px 0}.ico18{background-position:-288px 0}.ico19{background-position:-304px 0}.ico20{background-position:-320px 0}.ico21{background-position:-336px 0}.ico22{background-position:-352px 0}.ico23{background-position:-368px 0}.ico24{background-position:-384px 0}.ico25{background-position:-400px 0}.ico26{background-position:-416px 0}.ico27{background-position:-432px 0}.ico28{background-position:-448px 0}.ico29{background-position:-464px 0}.ico30{background-position:-480px 0}.ico31{background-position:-496px 0}.ico32{background-position:-512px 0}.ico33{background-position:-528px 0}.ico34{background-position:-544px 0}.ico35{background-position:-560px 0}.ico36{background-position:-576px 0}.ico37{background-position:-592px 0}.ico38{background-position:-608px 0}.ico39{background-position:-624px 0}.ico40{background-position:-640px 0}</style></span></div>
+    <a href="http://expando.github.io/add/" target="_blank" id="ext">»</a>
+
+    <div id="footer">
+      <a href="http://expando.github.io/">home</a> |
+      <a href="https://github.com/expando/expando.github.com/issues">problem</a> |
+      <a href="http://expando.github.io/add/terms_and_privacy.md">terms &amp; privacy</a> |
+      Copyright © 2014. All rights reserved.
+    </div>
+  </div>
+<!--[if IE 6]><script>document.execCommand("BackgroundImageCache",false,true);</script><![endif]-->
+<script>
+var i,
+h = location.href,
+u = (h.match(/[#&?]u=(.*)&t=/) || h.match(/[#&?]u=(.*)(&|$)/) || [0,document.referrer])[1] || "",
+t = (h.match(/[#&?]t=(.*)&u=/) || h.match(/[#&?]t=(.*)(&|$)/) || [])[1] || "",
+lg = (navigator.userLanguage||navigator.language||"").replace("-","_").toLowerCase(),
+$ = function(s) {return document.getElementById(s)},
+dec = function(s) {return decodeURIComponent(s)},
+enc = function(s) {return encodeURIComponent(s)},
+links = (function(s,h,a,r,e){for(h=0;h<s.length;h++){
+e=s[h].split(" ");r=dec(e[0]);r=a[r]={name:r,code:e[0]};
+r.url=e[1].replace(/^(\w*\:\/\/)?(\.)?([^\/]+)/,function(l,i,n,k){
+return(i||"http://")+(n?"www.":"")+k.replace(/(\.\w?)(\.\w{2,})?$/,function(n,o,w){
+return(o?({".":".com",".o":".org",".n":".net"})[o]:"")+(w||"")})
+});r.lang=e[2];r.size=e[3];a._list[h]=r}return a})([
+"Facebook .facebook./share.php?u=@u&t=@t",
+"Twitter twitter./intent/tweet?url=@u&text=@t",
+"google ./share?url=@u",Google+ plus.
+"Tumblr .tumblr./share?v=3&u=@u&t=@t&s=@s",
+"StumbleUpon .stumbleupon./submit?url=@u&title=@t",
+"LinkedIn .linkedin./shareArticle?mini=true&url=@u&title=@t&summary=@s",
+"Reddit reddit./submit?url=@u&title=@t",
+"Pinterest pinterest./pin/create/button/?description=@t&url=@u",
+"Blogger .blogger./blog_this.pyra?t=@t&u=@u",
+"Digg digg./submit?phase=2&url=@u&title=@t&bodytext=@s",
+"Delicious delicious./post?url=@u&title=@t&notes=@s",
+"Fark cgi.fark./cgi/fark/farkit.pl?h=@t&u=@u",
+"Friendfeed .friendfeed./share?title=@t&link=@u",
+"MySpace .myspace./Modules/PostTo/Pages/?u=@u&t=@t",
+"Mister%20Wong .mister-wong./addurl/?bm_url=@u&bm_description=@t",
+"NetVibes .netvibes./share?title=@t&url=@u",
+"NewsVine .newsvine./_tools/seed&save?u=@u&h=@t",
+"LiveJournal .livejournal./update.bml?subject=@t&event=@u",
+"Evernote .evernote./clip.action?url=@u&title=@t",
+"Flipboard share.flipboard./flipit/load?v=1.0&url=@u&title=@t",
+"Pocket getpocket./save?url=@u&title=@t",
+"TypePad .typepad./services/quickpost/post?v=2&qp_title=@t&qp_href=@u",
+"Box .box.n/api/1.0/import?url=@u&name=@t&description=&import_as=link",
+"Wanelo wanelo./p/post?bookmarklet=&source=toolbar&title=@t&url=@u",
+"%D0%92%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B5 vk./share.php?url=@u ru",
+"Draugiem.lv .draugiem.lv/say/ext/add.php?title=@t&titlePrefix=@t&link=@u lv",
+"Mixi mixi.jp/share.pl?u=@u jp",
+"GREE gree.jp/share/write?url=@u jp",
+"Yahoo!%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF bookmarks.yahoo.co.jp/bookmarklet/showpopup?t=@t&u=@u&opener=bm jp",
+"%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF b.hatena.ne.jp/add?mode=confirm&title=@tC&url=@u jp",
+"Choix .choix.jp/submit/?bookurl=@u&booktitle=@t&phase=0 jp",
+"Tuenti .tuenti./share?url=@u&suggested-text=@t es",
+"%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A service.weibo./share/share.php?title=@t&url=@u zh_cn",
+"%E8%85%BE%E8%AE%AF%E5%BE%AE%E5%8D%9A v.t.qq./share/share.php?title=@t&url=@u zh_cn",
+"QQ%E7%A9%BA%E9%97%B4 sns.qzone.qq./cgi-bin/qzshare/cgi_qzshare_onekey?url=@u&title=@t zh_cn",
+"%E4%BA%BA%E4%BA%BA%E7%BD%91 share.renren./share/buttonshare.do?title=@t&link=@u zh_cn",
+"%E7%BD%91%E6%98%93%E5%BE%AE%E5%8D%9A t.163./article/user/checkLogin.do?link=@u&info=@t zh_cn",
+"%E7%99%BE%E5%BA%A6%E6%90%9C%E8%97%8F cang.baidu./do/add?it=@t&iu=@u&fr=ien zh_cn",
+"LINE line.me/R/msg/text/?@t%20-%20@u",
+"QR%20Code /qr.html#u=@u",
+"TinyURL tinyurl./api-create.php?url=@u"
+],0,{_list:[]})._list;
+
+u = /\//.test(u) ? enc(u) : u;
+t = enc(dec(t.replace(/\+/g, " ")));
+
+if(u) $("url").value = dec(u);
+if(t) {
+  $("title").value = dec(t);
+  document.title = "Share: "+dec(t);
+}
+
+function update() {
+  t = enc($("title").value);
+  u = enc($("url").value);
+  makeList();
+  $("pageinfo").className = "flash";
+  setTimeout(function(){$("pageinfo").className="";},600);
+}
+
+function makeList() {
+  var list=[], first=[], g;
+  for(i=0; i<links.length; i++) {
+    g = links[i].lang;
+    g = g && g.indexOf(lg) >= 0;
+    (g ? first : list).push(
+      '<a href="'+
+      links[i].url.replace("@u",u).replace("@t",t).replace("@s",u)+
+      '" target="_blank"  title="'+links[i].name+
+      '"><i class="icon ico'+i+'"></i><span>'+
+      links[i].name+'</span></a>'
+    );
+  }
+  $("list").innerHTML = first.join("") + list.join("");
+  $("ext").href = location;
+
+  list = [" <style>.icon{background:url(icons.png) 0 no-repeat}"];
+  for(i=0; i<links.length; i++) list.push(".ico"+i+"{background-position:-"+i*16+"px 0}");
+  $("list").appendChild(document.createElement("span")).innerHTML = list.join("")+"<\/style>";
+}
+makeList();
+
+function bye(e) {
+  if(window.postMessage) (opener||parent).postMessage("bye", "*");
+}
+</script>
+<!--[if lt IE 9]><script>if(document.documentElement.offsetHeight<150)document.write("<style>"+document.all.tags("style")[0].innerHTML.replace(/\n/g," ").match(/IESW..(.+)..IESW/)[1]+"<\/style>");</script><![endif]-->
+
+
+</body></html>

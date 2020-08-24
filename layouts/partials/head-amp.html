@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it" ⚡ >
+<head>
+  <meta name="referrer" content="none">
+  <!-- AMP-->
+  
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+  <noscript>
+  <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+  </noscript>
+
+  
+  <!-- favicon and co. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color={{.Site.Params.bg_color}}>
+  <meta name="apple-mobile-web-app-title" content={{ .Site.Title }}>
+  <meta name="application-name" content={{ .Site.Title }}>
+  <meta name="msapplication-TileColor" content={{.Site.Params.bg_color}}>
+  <meta name="theme-color" content={{.Site.Params.bg_color}}>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- About page -->
+  <title>{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="keywords" content="{{ range $i, $e := .Params.tags }}{{if $i}},{{end}}{{ . }}{{ end }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <!-- OPEN graph and Twitter Card -->
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:title" content="{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}" />
+  <meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary | plainify }}{{end}}" />
+  <meta property="og:image" content="{{if isset .Params "banner"}}{{ .Site.BaseURL }}amp{{ .Page.RelPermalink }}/{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}"/>
+
+  <!-- Custom CSS -->
+  <!-- Those css minifined and combined together. See combined-min.css below{{if isset .Params "banner"}}{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}
+  <link rel="stylesheet" type="text/css" href="/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
+
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" />
+
+  <!-- Flattr  -->
+  <meta name="flattr:id" content="e0v7jk">
+
+  <!-- Highlight -->
+  <!-- Also minified and combined into combined-min.css
+  <link rel="stylesheet" type="text/css" href="/css/highlight/styles/railscasts.css"> -->
+
+  <!-- Fonts -->
+  <!-- Combined and minified
+  
+  <link rel="preload" as="image"  href="/images/icons/twitter.png">
+  <link rel="preload" as="image"  href="/images/icons/rss.png">
+  -->
+
+  
+
+    
+  <script type="application/ld+json">
+    {"@context": "http://schema.org", 
+     "@type": "BlogPosting",
+     "headline": "{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary | plainify }}{{end}}",
+     "image": "{{ .Site.BaseURL }}{{if isset .Params "banner"}}{{ .Params.banner }}{{ else}}{{ $.Site.Params.banner }}{{ end}}",
+     "keywords": "{{ range $i, $e := .Params.tags }}{{if $i}} {{end}}{{ . }}{{ end }}", 
+     "wordcount": "{{ .Content | countwords }}",
+     "publisher": "Tale of Moles",
+     "url": "{{ .Permalink }}",
+     "datePublished": "{{ .Date.Format "2006-01-02" }}",
+     "dateCreated": "{{ .Date.Format "2006-01-02" }}",
+     "dateModified": {{ ( .Lastmod.Format "2006-01-02" ) }},
+     "description": {{.Summary | plainify }},
+     "articleBody": "{{ .Plain  }}",
+       "author": {
+        "@type": "Person",
+        "name": "Iacopo Moles"
+      }
+     }
+    </script>
+
+  <style amp-custom >{{ partial "ampstylesmart" | safeCSS }}
+    
+  @media (prefers-color-scheme: dark) {
+    amp-social-share.custom-style {background-color: #4c566a}
+}
+
+@media (prefers-color-scheme: light) {
+  amp-social-share.custom-style { background-color: #D8DEE9}
+}
+    
+   amp-social-share.custom-style { 
+    background-position: center;
+     background-size: contain;}
+  </style>
