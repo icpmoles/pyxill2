@@ -6,32 +6,32 @@ title = "Pixyll Test"
 contentdir = "content"
 publishdir = "public"
 builddrafts = false
-CanonifyUrls = true
-theme = "pixyll"
-ignoreFiles = [ "\\.db$"]
+theme = "pyxill2"
+ignoreFiles = [ "\\.db$","\\.css$"]
 pygmentsUseClassic=false
-pygmentsStyle="monokai"
+pygmentsStyle="dracula"
 pygmentsCodefences=true
 #pygmentsOptions="linenos=table"
 Paginate= 10
-
-[indexes]
-  category = "categories"
-  tag = "tags"
+relativeURLs = false
+canonifyURLs= true
 
 [params]
+  toc= true
+  absURL= "https://example.com"
   mainSections = ["post"]
   bg_color= "#3b4252"
   theme_color= "#4c566a"
   twitter_username = "twittersupport"
   paginate = 10
-  description = "blog made with Hugo"
-  author = "Your Name"
+  description = "Theme for Hugo CMS"
+  author = "Author"
   banner= "/banner.png"
-#RssUrl = "http://otherwebsite.com/rss" 
+  staticman_api = "https://example.com/" #Add staticman API URL to enable staticman comments
+  RssUrl =  "https://example.com/rss"
   
 [author]
-  name = "Default Author"
+  name = "Author"
 	
 [outputs]
   home = ["HTML", "AMP", "RSS"]
@@ -52,3 +52,26 @@ Paginate= 10
   [privacy.youtube]
     disable = false
     privacyEnhanced = true 
+    
+[build]
+  writeStats = true
+  
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
