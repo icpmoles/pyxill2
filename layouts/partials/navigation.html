@@ -1,8 +1,9 @@
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}about/" rel="prefetch">{{ i18n "about" }}</a>
-<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}credits/" rel="prefetch">{{ i18n "credits" }}</a>
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}contact/" rel="prefetch">{{ i18n "contact" }}</a>
-<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}tags/" rel="prefetch">{{ i18n "tags" }}</a>
+<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}credits/" rel="prefetch">{{ i18n "credits" }}</a>
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}privacy-policy/" rel="prefetch">{{ i18n "privacy" }}</a>
+<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}tags/" rel="prefetch">{{ i18n "tags" }}</a>
+
 {{- if .Site.IsMultiLingual -}}
 {{- range $lang := .Site.Languages -}}
 {{- if ne $.Site.Language $lang -}}
