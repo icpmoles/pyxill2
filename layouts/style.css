@@ -1,0 +1,4 @@
+{{ $css := resources.Get "css/compr.css" }}
+{{ $style := $css | resources.Minify }}
+
+TEST

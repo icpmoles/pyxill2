@@ -3,7 +3,7 @@
 <head>
   
   <!-- AMP ref -->
-  <meta name="referrer" content="none">
+  <meta name="referrer" content="no-referrer">
   <!-- favicon and co. -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,6 +16,9 @@
   <meta name="theme-color" content={{.Site.Params.bg_color}}>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{.Site.Params.bg_color}}">
+  <meta name="msapplication-navbutton-color" content="{{.Site.Params.bg_color}}">
   
   <!-- About page -->
   <title>{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}</title>
@@ -59,10 +62,14 @@
   <link rel="preload" as="image"  href="/images/icons/rss.png">
   -->
 
+  {{ $style := resources.Get "/css/verbose.css" | resources.Minify  }}
+	
+  <link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
 
-  <link rel="preload" as="style" type="text/css" href="/css/combined-min-smart.css">
-  <link rel="stylesheet" type="text/css" href="/css/combined-min-smart.css">
+ <!--  <link rel="preload" as="style" type="text/css" href="/css/verbose.css">
+  <link rel="stylesheet" type="text/css" href="/css/verbose.css"> -->
   
 </head>
 <body class="">

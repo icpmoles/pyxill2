@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it" ⚡ >
 <head>
-  <meta name="referrer" content="none">
+  <meta name="referrer" content="no-referrer">
   <!-- AMP-->
   
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -23,6 +23,9 @@
   <meta name="theme-color" content={{.Site.Params.bg_color}}>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{.Site.Params.bg_color}}">
+  <meta name="msapplication-navbutton-color" content="{{.Site.Params.bg_color}}">
   
   <!-- About page -->
   <title>{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}</title>
@@ -30,7 +33,9 @@
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="keywords" content="{{ range $i, $e := .Params.tags }}{{if $i}},{{end}}{{ . }}{{ end }}">
-  <link rel="canonical" href="{{ .Permalink }}">
+  {{ range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+  {{ end }}
 
   <!-- OPEN graph and Twitter Card -->
   <meta property="og:type" content="website" />
@@ -48,7 +53,7 @@
 
   <!-- Google site verification -->
   <meta name="google-site-verification" content="oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" />
-
+  <!-- Facebook Admin -->
   <!-- Flattr  -->
   <meta name="flattr:id" content="e0v7jk">
 
@@ -86,18 +91,21 @@
       }
      }
     </script>
+	
 
-  <style amp-custom >{{ partial "ampstylesmart" | safeCSS }}
+  <style amp-custom >{{ partial "ampstylesmart" | safeCSS }} 
     
-  @media (prefers-color-scheme: dark) {
-    amp-social-share.custom-style {background-color: #4c566a}
+ @media (prefers-color-scheme: dark) {
+	 amp-social-share.custom-style {background-color: #4c566a}
+	 .anchor { filter: invert(1) }
 }
 
 @media (prefers-color-scheme: light) {
   amp-social-share.custom-style { background-color: #D8DEE9}
 }
-    
-   amp-social-share.custom-style { 
-    background-position: center;
-     background-size: contain;}
+	
+amp-social-share.custom-style { 
+	  background-position: center;
+	  background-size: contain;}
   </style>
+

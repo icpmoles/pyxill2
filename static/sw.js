@@ -2,7 +2,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        'style/verbose.css',
+        'css/verbose.min.css',
         'images/404.jpg',
         'index.html',
         '404.html'

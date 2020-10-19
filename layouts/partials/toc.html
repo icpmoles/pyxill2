@@ -1,0 +1,9 @@
+{{ if (gt .WordCount 400 )}}
+{{ if eq .Params.toc true  }} 
+<details class="toc_summary">
+<summary class="toc_title">Contents</summary>
+<p class="toc_list">{{ .TableOfContents }}</p>
+</details>
+{{ end }}
+
+{{ end }}

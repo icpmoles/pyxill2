@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta name="referrer" content="none">
+  <meta name="referrer" content="no-referrer">
   <!-- AMP ref -->
+  {{ if ne .Params.latex true  }}    
+
   <link rel="amphtml" href="{{ .Site.BaseURL }}amp{{ .Page.RelPermalink }}">
+
+{{ end }}
   <!-- favicon and co. -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,9 +20,12 @@
   <meta name="theme-color" content={{.Site.Params.bg_color}}>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{.Site.Params.bg_color}}">
+  <meta name="msapplication-navbutton-color" content="{{.Site.Params.bg_color}}">
   
   <!-- About page -->
-  <title>{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}</title>
+  <title>{{ .Title }} -{{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}">
   <meta name="author" content="{{ .Site.Params.author }}">
@@ -32,7 +39,7 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:title" content="{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}" />
   <meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}" />
-  <meta property="og:image" content="{{if isset .Params "banner"}}{{ .Site.BaseURL }}amp{{ .Page.RelPermalink }}/{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}"/>
+  <meta property="og:image" content="{{if isset .Params "banner"}}{{ $.Site.Params.absURL }}/{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}"/>
 
   <!-- Custom CSS -->
   <!-- Those css minifined and combined together. See combined-min.css below{{if isset .Params "banner"}}{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}
@@ -45,6 +52,13 @@
   <!-- Flattr  -->
   <meta name="flattr:id" content="e0v7jk">
 
+	<!-- MATH Rendering -->
+ {{ if eq .Params.latex true  }}  
+<!-- 
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script> -->
+<script src="/mathjax/tex-chtml.js" id="MathJax-script" async></script>
+
+{{ end }}
 
   <!-- Highlight -->
   <!-- Also minified and combined into combined-min.css
@@ -58,10 +72,14 @@
   <link rel="preload" as="image"  href="/images/icons/rss.png">
   -->
 
+{{ $style := resources.Get "/css/verbose.css" | resources.Minify }}
+	
+  <link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
 
-  <link rel="preload" as="style" type="text/css" href="/css/verbose.css">
-    <link rel="stylesheet" type="text/css" href="/css/verbose.css">
+ <!--  <link rel="preload" as="style" type="text/css" href="/css/verbose.css">
+  <link rel="stylesheet" type="text/css" href="/css/verbose.css"> -->
   
 </head>
 <body class="">

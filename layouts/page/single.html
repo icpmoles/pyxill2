@@ -6,6 +6,7 @@
       <div class="post-header mb2">
         <h1 class="py2" itemscope="" itemtype="http://schema.org/WebPage" itemprop="name">{{ .Title }} </h1>
       </div>
+      {{ partial "toc.html" . }}
 
       <article class="post-content">
       {{ .Content }}
