@@ -1,9 +1,9 @@
-+++
+---
 title = ""
 author = ""
 banner = ""
-date = 2018-10-04T15:53:37Z
+date = ""
 latex = false
 tags = []
 toc = false
-+++
+---
