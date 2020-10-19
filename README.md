@@ -7,6 +7,8 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 
 ## Features
 
+- High lighthouse score
+- No external services
 - Minimal JS use
 - Basic tag support.
 - Comments powered by Staticman
