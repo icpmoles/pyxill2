@@ -1,9 +1,13 @@
 +++
-title = ""
-author = ""
-banner = ""
-date = 2018-10-04T15:53:37Z
-latex = false
-tags = [""]
-toc = false
+title = "{{ replace .Name "-" " " | title }}"
+date = {{ .Date }}
+weight = 5
+chapter = true
+pre = "<b>X. </b>"
 +++
+
+### Chapter X
+
+# Some Chapter title
+
+Lorem Ipsum.
