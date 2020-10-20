@@ -6,7 +6,6 @@ title = "Pixyll Test"
 contentdir = "content"
 publishdir = "public"
 builddrafts = false
-theme = "pyxill2"
 ignoreFiles = [ "\\.db$","\\.css$"]
 pygmentsUseClassic=false
 pygmentsStyle="dracula"
