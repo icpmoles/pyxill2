@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="section is-fullheight" itemscope itemtype="https://schema.org/WebPage">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-7">
+        {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
+	
+        <section class="archive">
+          <h2>{{ .Key }}</h2>
+          
+          <ul>
+              {{ range .Pages }}
+            <li><time>{{ .Date.Format "Jan 2" }}</time>
+              
+              <br><a href="{{ .Permalink }}" class="permalink">{{ .Title }}</a>
+              
+              {{ if isset .Params "categories" }}
+              <br><span class="post-tags">
+                <span class="prefix">categories:</span> {{ range .Params.categories }}
+                  <a href="/categories/{{ . | urlize }}">{{ . }}</a> ·
+                {{ end }}
+              </span>
+              {{ end }}
+              {{ if isset .Params "tags" }}
+              <br><span class="post-tags">
+                <span class="prefix">tags:</span> {{ range .Params.tags }}
+                  <a href="/tags/{{ . | urlize }}">{{ . }}</a> ·
+                {{ end }}
+                </span>
+              {{ end }}
+            </li>
+              {{ end }}
+          </ul>
+        </section>
+        {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
