@@ -1,8 +1,11 @@
-{{ define "main" }}
-<section class="section is-fullheight" itemscope itemtype="https://schema.org/WebPage">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
+{{ partial "head.html" . }}
+<div class="site-wrap">
+    {{ partial "header.html" . }}
+    <div class="post p2 p-responsive wrap" role="main">
+        <div class="measure">
+          <div class="post-header mb2">
+            <h1 class="py2" itemscope="" itemtype="http://schema.org/WebPage" itemprop="name">{{ .Title }} </h1>
+          </div>
         {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
 	
         <section class="archive">
@@ -33,7 +36,8 @@
           </ul>
         </section>
         {{ end }}
+      </div>
     </div>
-  </div>
-</section>
-{{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+    

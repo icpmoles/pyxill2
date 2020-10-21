@@ -1,12 +1,11 @@
-{{ define "main" }}
-
-{{- if .Title }}
-<header class="page-header">
-    <h1>{{ .Title }}</h1>
-</header>
-{{- end }}
-
-<ul class="terms-tags">
+{{ partial "head.html" . }}
+<div class="site-wrap">
+    {{ partial "header.html" . }}
+    <div class="post p2 p-responsive wrap" role="main">
+        <div class="measure">
+          <div class="post-header mb2">
+            <h1 class="py2" itemscope="" itemtype="http://schema.org/WebPage" itemprop="name">{{ .Title }} </h1>
+          </div>
     {{- $type := .Type }}
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}
@@ -17,6 +16,7 @@
     </li>
     {{- end }}
     {{- end }}
-</ul>
-
-{{ end  }}{{/* end main */}}
+</div>
+</div>
+</div>
+{{ partial "footer.html" . }}
