@@ -1,7 +1,7 @@
 +++
 author = "Iacopo Moles"
 codehl = false
-date = 2020-08-22T22:00:00Z
+date = 2020-08-23T22:00:00Z
 tags = []
 title = "Privacy Policy"
 
