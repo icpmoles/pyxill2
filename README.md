@@ -17,7 +17,7 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 - AMP support.
 - MathJax support.
 
-###Example config:
+### Example config:
 
 ```toml
 baseURL = "https://example.com/"
@@ -103,7 +103,7 @@ canonifyURLs= true
       
 
 ```
-##Screenshots
+## Screenshots
 
 
 ![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/mobile%20light.png)
