@@ -43,5 +43,7 @@ disqusShortname = "sitename"
 ```
 
 
-
-![Pixyll Screenshot](https://raw.githubusercontent.com/azmelanar/hugo-theme-pixyll/master/images/tn.png)
+![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/mobile%20light.png)
+![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/mobile%20dark.png)
+![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/desktop%20light.png)
+![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/dektop%20dark.png)
