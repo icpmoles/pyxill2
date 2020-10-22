@@ -52,8 +52,8 @@ canonifyURLs= true
   description = "for the web scraping"
   author = "Author"
   banner= "/banner.png"
-//  staticman_api = "http://your-staticman-url/v2/connect/GITHUB-USERNAME/GITHUB-REPOSITORY" #Add staticman API URL to enable staticman comments
-// RssUrl = "https://feeds.feedburner.com/feed for analytics" 
+# staticman_api = "http://your-staticman-url/v2/connect/GITHUB-USERNAME/GITHUB-REPOSITORY" #Add staticman API URL to enable staticman comments
+# RssUrl = "https://feeds.feedburner.com/feed for analytics" 
   
 [author]
   name = "The Author"
