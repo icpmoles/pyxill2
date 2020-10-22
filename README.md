@@ -5,7 +5,7 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c0a0e8ce-595c-411d-9d9a-08e99bee21f6/deploy-status)](https://app.netlify.com/sites/pyxill2/deploys)
 
-[![Import this project into Forestry](https://assets.forestry.io/import-to-forestry.svg)](https://app.forestry.io/quick-start?repo=icpmoles/hugoback&engine=hugo&version=0.72.0)
+[![Import this project into Forestry](https://assets.forestry.io/import-to-forestry.svg)](https://app.forestry.io/quick-start?repo=icpmoles/pyxill2&engine=hugo&version=0.72.0)
 
 ## Features
 
