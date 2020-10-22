@@ -1052,7 +1052,7 @@ h6 {
 }
 
 code {
-	color: var(--sec-text)
+	color: var(--main-text)
 }
 
 pre {
@@ -2084,6 +2084,9 @@ border-radius: .25rem
 	opacity: 0%;
 	font-size:50%;
 	vertical-align: middle;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: opacity .15s ease;
+    transition: opacity .15s ease;
 }
 
 .toc_summary {
