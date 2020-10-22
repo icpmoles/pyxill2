@@ -19,6 +19,7 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 - Pagination support.
 - AMP support.
 - MathJax support.
+- Homepage under 10KiB
 
 ### Example config:
 
@@ -113,3 +114,5 @@ canonifyURLs= true
 ![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/mobile%20dark.png)
 ![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/desktop%20light.png)
 ![Pixyll Screenshot](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/desktop%20dark.png)
+## Lighthouse Score
+![Lighthouse of 100](https://raw.githubusercontent.com/IcpMoles/pyxill2/master/images/Screenshot_20201022-105923~2.png)
