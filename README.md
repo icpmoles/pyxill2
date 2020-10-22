@@ -20,26 +20,88 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 Example config:
 
 ```toml
-languageCode = "en-us"
+baseURL = "https://example.com/"
+absURL= "https://example.com"
+languageCode = "en-en"
+title = "Pyxill 2"
+
 contentdir = "content"
 publishdir = "public"
 builddrafts = false
-baseUrl = ""
-canonifyurls = true
-title = "Pixyll"
-author = "admin"
-theme = "pixyll"
-disqusShortname = "sitename"
-
+theme = "pyxill2"
+ignoreFiles = [ "\\.db$","\\.css$"]
+pygmentsUseClassic=false
+pygmentsStyle="dracula"
+pygmentsCodefences=true
+#pygmentsOptions="linenos=table"
+Paginate= 10
+relativeURLs = false
+canonifyURLs= true
 [indexes]
   category = "categories"
   tag = "tags"
 
 [params]
-  search_engine = true
-  google_analytics_id = "XX-XXXXXXXX-X"
-  twitter_username = "username"
-  paginate = true
+  toc= true
+  absURL= "https://example.com"
+  mainSections = ["post"]
+  bg_color= "#3b4252"
+  theme_color= "#4c566a"
+  twitter_username = "twittersupport"
+  paginate = 10
+  description = "for the web scraping"
+  author = "Author"
+  banner= "/banner.png"
+//  staticman_api = "http://your-staticman-url/v2/connect/GITHUB-USERNAME/GITHUB-REPOSITORY" #Add staticman API URL to enable staticman comments
+// RssUrl = "https://feeds.feedburner.com/feed for analytics" 
+  
+[author]
+  name = "The Author"
+	
+[outputs]
+  home = ["HTML", "AMP", "RSS"]
+  page = ["HTML", "AMP", "RSS"]
+
+  
+[privacy]
+  [privacy.instagram]
+    disable = false
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.vimeo]
+    disable = false
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true 
+    
+[build]
+  writeStats = true
+  
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+      
+
 ```
 
 
