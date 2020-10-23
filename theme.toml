@@ -1,7 +1,20 @@
-name = "pixyll"
+name = "Pyxill 2"
 description = "A simple, beautiful theme for Hugo."
 author = "Dmitriy Slupytskyi"
 license = "MIT"
 source_repo = "https://github.com/azmelanar/hugo-theme-pixyll"
 tags = ["blog", "personal", "search", "responsive", "minimal"]
-min_version = 0.25
+features = ["minimal js", "local fonts", "fast", "responsive"]
+min_version = "0.65.1"
+
+
+
+[author]
+    name = "Iacopo Moles"
+    homepage = "https://icpmoles.github.io/"
+
+
+[original]
+    author = "Dmitriy Slupytskyi"
+    homepage = "https://themes.gohugo.io/pixyll/"
+    repo = "https://github.com/azmelanar/hugo-theme-pixyll"

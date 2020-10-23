@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" ⚡ >
+<html lang="en" ⚡ >
 <head>
   <meta name="referrer" content="no-referrer">
   <!-- AMP-->
@@ -40,7 +40,7 @@
   <!-- OPEN graph and Twitter Card -->
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />
+  {{ if isset .Site.Params "twitter_username" }}<meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />	{{ end }}
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:title" content="{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}" />
   <meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary | plainify }}{{end}}" />
@@ -52,11 +52,15 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
   <!-- Google site verification -->
-  <meta name="google-site-verification" content="oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" />
-  <!-- Facebook Admin -->
-  <!-- Flattr  -->
-  <meta name="flattr:id" content="e0v7jk">
+	{{ if isset .Site.Params "google_analytics_id" }}
+  <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
+	{{ end }}
 
+  <!-- Flattr  -->
+{{ if isset .Site.Params "flattr_id" }}
+  <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
+{{ end }}
+	
   <!-- Highlight -->
   <!-- Also minified and combined into combined-min.css
   <link rel="stylesheet" type="text/css" href="/css/highlight/styles/railscasts.css"> -->
@@ -78,7 +82,7 @@
      "image": "{{ .Site.BaseURL }}{{if isset .Params "banner"}}{{ .Params.banner }}{{ else}}{{ $.Site.Params.banner }}{{ end}}",
      "keywords": "{{ range $i, $e := .Params.tags }}{{if $i}} {{end}}{{ . }}{{ end }}", 
      "wordcount": "{{ .Content | countwords }}",
-     "publisher": "Tale of Moles",
+     "publisher": {{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary | plainify }}{{end}},
      "url": "{{ .Permalink }}",
      "datePublished": "{{ .Date.Format "2006-01-02" }}",
      "dateCreated": "{{ .Date.Format "2006-01-02" }}",
@@ -87,7 +91,7 @@
      "articleBody": "{{ .Plain  }}",
        "author": {
         "@type": "Person",
-        "name": "Iacopo Moles"
+        "name": "{{ .Site.Params.author }}"
       }
      }
     </script>

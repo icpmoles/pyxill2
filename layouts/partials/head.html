@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta name="referrer" content="no-referrer">
   <!-- AMP ref -->
@@ -35,7 +35,7 @@
   <!-- OPEN graph and Twitter Card -->
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />
+  {{ if isset .Site.Params "twitter_username" }}<meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />	{{ end }}
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:title" content="{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}" />
   <meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}" />
@@ -47,11 +47,14 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
   <!-- Google site verification -->
-  <meta name="google-site-verification" content="oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" />
+	{{ if isset .Site.Params "google_analytics_id" }}
+  <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
+	{{ end }}
 
   <!-- Flattr  -->
-  <meta name="flattr:id" content="e0v7jk">
-
+{{ if isset .Site.Params "flattr_id" }}
+  <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
+{{ end }}
 	<!-- MATH Rendering -->
  {{ if eq .Params.latex true  }}  
 
