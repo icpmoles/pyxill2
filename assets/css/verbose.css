@@ -1053,7 +1053,7 @@ h6 {
 
 code {
 	color: #f8f8f2;
-	background-color: #282a36;
+	background-color: #272822;
 	word-wrap: break-word;
 	font-weight: bold;
 	
@@ -2114,4 +2114,54 @@ border-radius: .25rem
 
 .toc_list{
     list-style: outside none none;
+}
+
+/* TABLE */
+
+table {
+	display: table;
+		overflow-x: auto;
+	border-spacing: 0;
+	
+	text-align: left;
+	width: 100%;
+	background-color: var(--button-accent);
+}
+
+td,
+th {
+	border-bottom: .2rem solid var(--background-color);
+	padding: 1.2rem 1.5rem;
+	border: 1px solid var(--sec-text);/*  inner column border */
+	border-left: 1px;
+	border-right: 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+	padding: 0.5em 1em; 
+	
+}
+
+td:first-child,
+  th:first-child {
+	padding-left: 0;
+}
+
+td:last-child,
+  th:last-child {
+	padding-right: 0;
+}
+
+@media (min-width: 40rem) {
+	table {
+		
+	}
+}
+
+thead {
+    background-color: var(--button-disabled-background);
+    color: var(--main-text);
+    text-align: left;
+	vertical-align: bottom;
+	border-bottom: 1px;
 }
