@@ -24,7 +24,7 @@
   {{ $comments := readDir "data/comments" }}
   {{ $.Scratch.Add "hasComments" 0 }}
 
-  {{ $entryId := print  .Title "-" .UniqueID }}
+  {{ $entryId := print  .Title "-" .File.UniqueID }}
 
   {{ range $comments }}
 	
