@@ -1054,6 +1054,9 @@ h6 {
 code {
 	color: #f8f8f2;
 	background-color: #282a36;
+	word-wrap: break-word;
+	font-weight: bold;
+	
 }
 
 pre {
@@ -2034,10 +2037,12 @@ html {
   font: inherit;
   padding: 10px;
   margin-top: 20px;
-  outline-color: var( --button-accent);
+  border: 0.2rem solid var( --button-accent);
   width: 100%;
   background: var(--button-background);
   color: var(--sec-text);
+  border-radius: .6rem;
+  
 }
 
 .btn {
