@@ -39,7 +39,7 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:title" content="{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}" />
   <meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}" />
-  <meta property="og:image" content="{{if isset .Params "banner"}}{{ $.Site.Params.absURL }}/{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}"/>
+  <meta property="og:image" content="{{if isset .Params "banner"}}{{ .Site.BaseURL }}/{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}"/>
 
   <!-- Custom CSS -->
   <!-- Those css minifined and combined together. See combined-min.css below{{if isset .Params "banner"}}{{ .Params.banner }}{{ else}}{{ .Site.BaseURL }}{{ $.Site.Params.banner }}{{ end}}
