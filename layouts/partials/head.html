@@ -35,7 +35,7 @@
   <!-- OPEN graph and Twitter Card -->
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />
+  {{ if isset .Site.Params "twitter_username" }}<meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}" />	{{ end }}
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:title" content="{{ .Title }} - {{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}" />
   <meta property="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}" />
@@ -52,7 +52,7 @@
 	{{ end }}
 
   <!-- Flattr  -->
-{{ if isset .Site.Params "google_analytics_id" }}
+{{ if isset .Site.Params "flattr_id" }}
   <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
 {{ end }}
 	<!-- MATH Rendering -->
