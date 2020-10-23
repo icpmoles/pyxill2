@@ -54,8 +54,7 @@
 
 	<!-- MATH Rendering -->
  {{ if eq .Params.latex true  }}  
-<!-- 
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script> -->
+
 <script src="/mathjax/tex-chtml.js" id="MathJax-script" async></script>
 
 {{ end }}
@@ -70,16 +69,25 @@
   <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato:900,300'> 
   <link rel="preload" as="image"  href="/images/icons/twitter.png">
   <link rel="preload" as="image"  href="/images/icons/rss.png">
-  -->
+ 
+-->
 
-{{ $style := resources.Get "/css/verbose.css" | resources.Minify }}
+  {{ $style := resources.Get "/css/verbose.css" | resources.Minify }}
 	
   <link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
   <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
 
+
  <!--  <link rel="preload" as="style" type="text/css" href="/css/verbose.css">
   <link rel="stylesheet" type="text/css" href="/css/verbose.css"> -->
   
+
+  <!--  CRITCAL INLINE CSS -->
+
+  {{ with resources.Get "critical.css" | minify }}
+  <style>{{ .Content | safeCSS }}</style>
+  {{ end }}
+
 </head>
 <body class="">
