@@ -47,11 +47,14 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
   <!-- Google site verification -->
-  <meta name="google-site-verification" content="oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" />
+	{{ if isset .Site.Params "google_analytics_id" }}
+  <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
+	{{ end }}
 
   <!-- Flattr  -->
-  <meta name="flattr:id" content="e0v7jk">
-
+{{ if isset .Site.Params "google_analytics_id" }}
+  <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
+{{ end }}
 	<!-- MATH Rendering -->
  {{ if eq .Params.latex true  }}  
 
