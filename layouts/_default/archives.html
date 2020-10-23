@@ -8,10 +8,10 @@
           </div>
         {{ range (where .Site.RegularPages "Type" "post").GroupByDate "2006" }}
 	
-        <section class="archive">
+        <section class="archive ">
           <h2>{{ .Key }}</h2>
           
-          <table>
+          <table class="none">
               {{ range .Pages }}
               <tr>
                 
@@ -22,10 +22,10 @@
             <tr>
                 
               <td ></td>   
-              <td valign="top" class="votelinks">{{ if isset .Params "tags" }}
+              <td valign="top" >{{ if isset .Params "tags" }}
                 <span class="post-meta">
-                  <span class="prefix">tags:</span>{{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="/tags/{{ . | urlize }}" >{{ . }}</a>{{ end }} {{ end }}
-              <span> | Date: <time>{{ .Date.Format "Jan 2" }}</time></span>
+                  <span class="prefix">tags:</span>{{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="/tags/{{ . | urlize }}" >{{ . }}</a>{{ end }} 
+              <span class="post-meta"> | Date: {{ end }}<time class="post-meta">{{ .Date.Format "Jan 2" }}</time></span>
             </td>
             
           </tr>
