@@ -2118,7 +2118,7 @@ border-radius: .25rem
 
 /* TABLE */
 
-table {
+article table {
 	display: table;
 		overflow-x: auto;
 	border-spacing: 0;
@@ -2128,8 +2128,8 @@ table {
 	background-color: var(--button-accent);
 }
 
-td,
-th {
+article td,
+article th {
 	border-bottom: .2rem solid var(--background-color);
 	padding: 1.2rem 1.5rem;
 	border: 1px solid var(--sec-text);/*  inner column border */
@@ -2142,23 +2142,18 @@ th {
 	
 }
 
-td:first-child,
-  th:first-child {
+article td:first-child,
+article th:first-child {
 	padding-left: 0;
 }
 
-td:last-child,
-  th:last-child {
+article td:last-child,
+article th:last-child {
 	padding-right: 0;
 }
 
-@media (min-width: 40rem) {
-	table {
-		
-	}
-}
 
-thead {
+article thead {
     background-color: var(--button-disabled-background);
     color: var(--main-text);
     text-align: left;
