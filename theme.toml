@@ -1,10 +1,10 @@
 name = "Pyxill 2"
-description = "A simple, beautiful theme for Hugo."
-
+description = "A simple and fast theme for Hugo."
+homepage = "https://pyxill2.netlify.app/"
 license = "MIT"
-source_repo = "https://github.com/azmelanar/hugo-theme-pixyll"
+source_repo = "https://github.com/IcpMoles/pyxill2"
 tags = ["blog", "personal", "search", "responsive", "minimal"]
-features = ["minimal js", "local fonts", "fast", "responsive", "dark mode", "nord theme palette"]
+features = ["minimal js", "local fonts", "fast", "responsive", "dark mode", "nord theme palette", "mathjax"]
 min_version = "0.65.1"
 
 
