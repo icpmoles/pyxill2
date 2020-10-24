@@ -5,11 +5,12 @@
   <a class="post-link" href="{{ .RelPermalink }}" itemprop="url">
   <h3 class="h2 post-title"><div itemprop="name">{{ .Title }}</div> {{ if .Draft }}(draft){{end}}</h3></a>
   <p class="post-summary" itemprop="description" itemprop="headline">{{ .Summary }}</p>
-
+  {{ if isset .Params "tags" }}
   {{ $baseurl := .Site.BaseURL }}
   <p class="post-meta">{{ i18n "tags" }}:&nbsp;
   {{ range $i, $e := .Params.tags }}
       {{if $i}},&nbsp;{{end}}
       <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{lower . }}/">{{ . }}</a>
   {{ end }}</p>
+  {{ end }}
 </div>
