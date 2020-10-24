@@ -20,7 +20,7 @@
  <div class="staticman" role="complementary" id="Comments"> 
 <div class="post-comments">
   <h3>Comments</h3>
-
+  {{ if (fileExists "data/comments/placeholder/comment.json") -}}
   {{ $comments := readDir "data/comments" }}
   {{ $.Scratch.Add "hasComments" 0 }}
 
@@ -46,6 +46,7 @@
   {{ if eq ($.Scratch.Get "hasComments") 0 }}
     <p>Nothing yet.</p>
   {{ end }}
+  
 
   <h3>Say something</h3>
 
@@ -68,4 +69,5 @@
 
 </div>
 </div>
+{{ end }}
 {{ end }}
