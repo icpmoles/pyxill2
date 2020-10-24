@@ -4,7 +4,7 @@ author = "Dmitriy Slupytskyi"
 license = "MIT"
 source_repo = "https://github.com/azmelanar/hugo-theme-pixyll"
 tags = ["blog", "personal", "search", "responsive", "minimal"]
-features = ["minimal js", "local fonts", "fast", "responsive"]
+features = ["minimal js", "local fonts", "fast", "responsive", "dark mode", "nord theme palette"]
 min_version = "0.65.1"
 
 
