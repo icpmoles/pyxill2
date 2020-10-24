@@ -22,10 +22,10 @@
             <tr>
                 
               <td ></td>   
-              <td valign="top" >{{ if isset .Params "tags" }}
-                <span class="post-meta">
+              <td valign="top" class="post-meta" >{{ if isset .Params "tags" }}
+                <span >
                   <span class="prefix">tags:</span>{{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="/tags/{{ . | urlize }}" >{{ . }}</a>{{ end }} 
-              <span class="post-meta"> | Date: {{ end }}<time class="post-meta">{{ .Date.Format "Jan 2" }}</time></span>
+              <span > | </span> {{ end }}<span> Date: <time >{{ .Date.Format "Jan 2" }}</time></span>
             </td>
             
           </tr>
