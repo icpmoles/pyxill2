@@ -58,6 +58,11 @@
 	<!-- MATH Rendering -->
  {{ if eq .Params.latex true  }}  
 
+<!-- Coil  -->
+{{ if isset .Site.Params "payment_pointer" }}
+<meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
+{{ end }}
+
 <script src="/mathjax/tex-chtml.js" id="MathJax-script" async></script>
 
 {{ end }}
