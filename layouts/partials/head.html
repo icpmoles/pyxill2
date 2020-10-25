@@ -55,16 +55,15 @@
 {{ if isset .Site.Params "flattr_id" }}
   <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
 {{ end }}
-	<!-- MATH Rendering -->
- {{ if eq .Params.latex true  }}  
-
-<!-- Coil  -->
+	
+	<!-- Coil  -->
 {{ if isset .Site.Params "payment_pointer" }}
 <meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
 {{ end }}
-
+	
+	<!-- MATH Rendering -->
+ {{ if eq .Params.latex true  }}  
 <script src="/mathjax/tex-chtml.js" id="MathJax-script" async></script>
-
 {{ end }}
 
   <!-- Highlight -->

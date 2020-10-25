@@ -42,13 +42,21 @@
   <link rel="stylesheet" type="text/css" href="/css/basscss.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
-  <!-- Google site verification -->
-  <meta name="google-site-verification" content="oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" />
+   <!-- Google site verification -->
+{{ if isset .Site.Params "google_analytics_id" }}
+  <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
+{{ end }}
 
   <!-- Flattr  -->
-  <meta name="flattr:id" content="e0v7jk">
-
-  
+{{ if isset .Site.Params "flattr_id" }}
+  <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
+{{ end }}
+	
+<!-- Coil  -->
+{{ if isset .Site.Params "payment_pointer" }}
+<meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
+{{ end }}
+	
   <!-- Highlight -->
   <!-- Also minified and combined into combined-min.css
   <link rel="stylesheet" type="text/css" href="/css/highlight/styles/railscasts.css"> -->

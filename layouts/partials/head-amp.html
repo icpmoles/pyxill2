@@ -52,13 +52,18 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
   <!-- Google site verification -->
-	{{ if isset .Site.Params "google_analytics_id" }}
+{{ if isset .Site.Params "google_analytics_id" }}
   <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
-	{{ end }}
+{{ end }}
 
   <!-- Flattr  -->
 {{ if isset .Site.Params "flattr_id" }}
   <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
+{{ end }}
+	
+<!-- Coil  -->
+{{ if isset .Site.Params "payment_pointer" }}
+<meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
 {{ end }}
 	
   <!-- Highlight -->
