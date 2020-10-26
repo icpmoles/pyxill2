@@ -42,6 +42,15 @@ textarea {
 	margin: 0
 }
 
+
+h1.site-title {
+    margin-block-start: 0;
+    margin-inline-end: 0px;
+    margin-block-end: 0;
+    font-size: 24px;
+}
+
+
 dl,
 h1,
 h2,
@@ -883,7 +892,7 @@ img {
 }
 
 .posts .post,
-.related-post-title {
+.related-post-title, .archive {
 	border-bottom: thin solid #f3f3f3
 }
 
@@ -907,12 +916,12 @@ img {
 	margin: 0
 }
 
-.posts .post {
+.posts .post, .archive{
 	margin-bottom: .75em;
 	padding-bottom: .375em
 }
 
-.posts .post:last-child {
+.posts .post:last-child, .archive:last-child {
 	border-bottom: 0;
 	margin-bottom: .375em;
 	padding-bottom: 0
@@ -1177,12 +1186,12 @@ h6 {
 	.post-link .post-title {
 		margin-top: .5em
 	}
-	.posts .post {
+	.posts .post, .archive {
 		margin-bottom: 1.333em;
 		padding-bottom: .666em;
 		border-bottom: thin solid #f3f3f3
 	}
-	.posts .post:last-child {
+	.posts .post:last-child, .archive:last-child {
 		border-bottom: 0;
 		margin-bottom: .333em;
 		padding-bottom: 0
@@ -1249,12 +1258,12 @@ h6 {
 	.post-link .post-title {
 		margin-top: .125em
 	}
-	.posts .post {
+	.posts .post, .archive {
 		margin-bottom: 2.666em;
 		padding-bottom: 1.333em;
 		border-bottom: thin solid #f3f3f3
 	}
-	.posts .post:last-child {
+	.posts .post:last-child, .archive:last-child{
 		border-bottom: 0;
 		margin-bottom: .666em;
 		padding-bottom: 0
@@ -2160,3 +2169,5 @@ article thead {
 	vertical-align: bottom;
 	border-bottom: 1px;
 }
+
+
