@@ -1042,6 +1042,7 @@ pre {
 	font-family: Menlo, Monaco, "Courier New", monospace;
 	overflow: auto;
 	max-width: 100%;
+	background-color:#282a36;
 }
 
 .h1,
@@ -1066,10 +1067,11 @@ code {
 	word-wrap: break-word;
 	font-weight: bold;
 	
+	
 }
 
 pre>code{
-	background-color:#282a36;
+	
 	display: block;
 }
 
