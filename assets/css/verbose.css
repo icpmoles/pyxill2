@@ -2177,4 +2177,6 @@ article thead {
 	border-bottom: 1px;
 }
 
-
+.twitter-tweet {
+    color: var(--sec-text);
+}
