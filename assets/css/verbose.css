@@ -1040,7 +1040,8 @@ abbr {
 code,
 pre {
 	font-family: Menlo, Monaco, "Courier New", monospace;
-	overflow: auto
+	overflow: auto;
+	max-width: 100%;
 }
 
 .h1,
@@ -1062,10 +1063,14 @@ h6 {
 
 code {
 	color: #f8f8f2;
-	background-color: #272822;
 	word-wrap: break-word;
 	font-weight: bold;
 	
+}
+
+pre>code{
+	background-color:#282a36;
+	display: block;
 }
 
 pre {
