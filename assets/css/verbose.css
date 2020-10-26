@@ -2019,7 +2019,7 @@ html {
 .post-comments {
   margin-top: 60px;
   margin-bottom: 30px;
-   padding: 1.125em;
+   padding-right: 1.125em;
 }
 
 .post-comment {
@@ -2178,26 +2178,52 @@ article thead {
 }
 
 .twitter-tweet {
-    color: var(--sec-text);
+    color: red;
 }
 
 /* width */
-::-webkit-scrollbar {
-  width: 10px;
+code::-webkit-scrollbar {
+  
   height: 10px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: var(--sec-text); 
+code::-webkit-scrollbar-track {
+  background: #4c566a; 
+  border-radius: 5px;
 }
  
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--button-background); 
+code::-webkit-scrollbar-thumb {
+  background:  #ECEFF4; 
+  border-radius: 5px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--background-color); 
+code::-webkit-scrollbar-thumb:hover {
+  background:  #5E81AC; 
 }
+
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: var(--button-background); 
+	
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: var(--sec-text); 
+	
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: var(--link-hover); 
+  }
