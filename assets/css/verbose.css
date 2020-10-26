@@ -2180,3 +2180,24 @@ article thead {
 .twitter-tweet {
     color: var(--sec-text);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--sec-text); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--button-background); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-color); 
+}
