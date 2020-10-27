@@ -2227,3 +2227,11 @@ code::-webkit-scrollbar-thumb:hover {
   ::-webkit-scrollbar-thumb:hover {
 	background: var(--link-hover); 
   }
+
+  .email:not(:placeholder-shown) {
+	border-color:  #BF616A;
+  }
+
+  .email:valid {
+	border-color: #A3BE8C;
+  }

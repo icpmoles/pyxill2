@@ -55,9 +55,9 @@
     <input type="hidden" name="options[redirect]" value= "{{ .Site.BaseURL }}{{ .RelPermalink }}#comment-submitted">
     <input type="hidden" name="options[entryTitle]" value="{{ .Title }}" >	  
     <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
-    <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" aria-label="Input area for your name">
-    <input name="fields[email]" type="email" class="post-comment-field" placeholder="Your email address" aria-label="Input area for your email address">
-    <textarea name="fields[body]" class="post-comment-field" placeholder="Your message. Feel free to use Markdown." rows="10" aria-label="Input area for your comment"></textarea>
+    <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" aria-label="Input area for your name" required="required">
+    <input name="fields[email]" type="email" class="post-comment-field email" placeholder="Your email address" aria-label="Input area for your email address" required="required"> 
+    <textarea name="fields[body]" class="post-comment-field" placeholder="Your message. Feel free to use Markdown." rows="10" aria-label="Input area for your comment" required="required"></textarea>
     <input type="submit" class="post-comment-field btn pagination-item" value="Submit" aria-label="Button to submit your comment">
   </form>
 </div>
