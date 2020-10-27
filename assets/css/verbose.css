@@ -89,7 +89,8 @@ summary {
 
 body {
 	line-height: 1.5rem;
-	font-weight: 400
+	font-weight: 400;
+	
 }
 
 .f1,
@@ -1043,6 +1044,7 @@ pre {
 	overflow: auto;
 	max-width: 100%;
 	background-color:#282a36;
+	overflow-y: hidden;
 }
 
 .h1,
