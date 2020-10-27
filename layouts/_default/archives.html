@@ -25,7 +25,7 @@
               <td valign="top" class="post-meta" >{{ if isset .Params "tags" }}
                 <span >
                   <span class="prefix">tags:</span>{{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="/tags/{{ . | urlize }}" >{{ . }}</a>{{ end }} 
-              <span > | </span> {{ end }}<span> Date: <time >{{ .Date.Format "Jan 2" }}</time></span>
+              <span aria-hidden="true"> | </span> {{ end }}<span> Date: <time content="{{ .Date.Format "2006-01-02"}}" >{{ .Date.Format "Jan 2" }}</time></span>
             </td>
             
           </tr>
