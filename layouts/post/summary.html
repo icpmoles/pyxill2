@@ -4,7 +4,7 @@
   <div class="clearfix"></div>
   <a class="post-link" href="{{ .RelPermalink }}" itemprop="url">
   <h2 class="h2 post-title"><div itemprop="name">{{ .Title }}</div> {{ if .Draft }}(draft){{end}}</h3></a>
-  <div class="post-summary" itemprop="description, headline">{{ .Summary }}</div>
+  <P class="post-summary" itemprop="description, headline">{{ .Summary }}</p>
   {{ if isset .Params "tags" }}
   {{ $baseurl := .Site.BaseURL }}
   <p class="post-meta">{{ i18n "tags" }}:&nbsp;
