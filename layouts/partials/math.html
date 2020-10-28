@@ -1,0 +1,17 @@
+    <!-- MATH Rendering -->
+    
+    {{ if eq .Params.math true  }}  
+
+    {{ if eq .Site.Params.math_library "mathjax"  }}  
+    <script src="/mathjax/tex-chtml.js" id="MathJax-script" async></script>
+    {{ end }}
+
+    {{ if eq .Site.Params.math_library "katex"  }}  
+    <link rel="stylesheet" href="/katex/katex.min.css" >
+<script defer src="/katex/katex.min.js" ></script>
+<script defer src="/katex/auto-render.min.js" 
+    onload="renderMathInElement(document.body);"></script>
+    {{ end }}
+    
+
+    {{ end }}

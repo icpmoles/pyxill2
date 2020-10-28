@@ -62,9 +62,7 @@
 {{ end }}
 	
 	<!-- MATH Rendering -->
- {{ if eq .Params.latex true  }}  
-<script src="/mathjax/tex-chtml.js" id="MathJax-script" async></script>
-{{ end }}
+  {{ partial "math.html" . }}
 
   <!-- Highlight -->
   <!-- Also minified and combined into combined-min.css

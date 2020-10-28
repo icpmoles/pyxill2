@@ -2237,3 +2237,9 @@ code::-webkit-scrollbar-thumb:hover {
   .email:valid {
 	border-color: #A3BE8C;
   }
+
+  mjx-container[jax="CHTML"] , .katex-display{
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+}

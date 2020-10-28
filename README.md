@@ -50,6 +50,7 @@ canonifyURLs= true
   tag = "tags"
 
 [params]
+  math_library = "katex"
   toc= true
   absURL= "https://example.com"
   mainSections = ["post"]
