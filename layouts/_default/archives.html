@@ -9,7 +9,7 @@
         {{ range (where .Site.RegularPages "Type" "post").GroupByDate "2006" }}
 	
         <section class="archive ">
-          <h2  aria-label="Articles published during {{ .Date.Format "2006"}}">{{ .Key }}</h2>
+          <h2  aria-label="Articles published during {{ .Key }}">{{ .Key }}</h2>
           
           <table class="none">
               {{ range .Pages }}
