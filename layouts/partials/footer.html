@@ -11,7 +11,7 @@
             {{ if eq .Site.Params.footer_links true }}
               {{ if eq .Site.Params.custom_footbar true }}
                 {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
+                {{ range .Site.Menus.footer }}
                 <a  href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> 
                 {{ end }}
                 
