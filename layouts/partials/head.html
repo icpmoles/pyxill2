@@ -26,7 +26,7 @@
   <meta name="msapplication-navbutton-color" content="{{.Site.Params.bg_color}}">
   
   <!-- About page -->
-  <title>{{ .Title }} -{{ if .IsHome }} {{.Site.Params.description}} {{ else }} {{.Site.Title}} {{ end }}</title>
+  <title>{{ if .IsHome }} {{ .Site.Title }} - {{.Site.Params.description}} {{ else }} {{.Title}} {{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}">
   <meta name="author" content="{{ .Site.Params.author }}">
@@ -73,11 +73,6 @@
   <link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
   <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
-
-
- <!--  <link rel="preload" as="style" type="text/css" href="/css/verbose.css">
-  <link rel="stylesheet" type="text/css" href="/css/verbose.css"> -->
-  
 
   <!--  CRITCAL INLINE CSS -->
 

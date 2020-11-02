@@ -13,17 +13,30 @@ Head to the tutorial from the [main blog](https://pyxill2.netlify.app/post/setup
 
 ## Features
 
-- High lighthouse score
-- No external services
-- Minimal JS use
+- High Lighthouse score.
+- No external dependencies.
+- Minimal JS use (for the Web Share API, the AMP website and the caching in the PWA).
 - Basic tag support.
-- Comments powered by Staticman
+- Comments powered by Staticman.
 - Powerful sharing widget.
 - Social links (currently only for twitter).
 - Pagination support.
 - AMP support.
 - MathJax support.
-- Homepage under 10KiB
+- Homepage under 20KiB.
+
+## Changes from Pixyll
+
+- No more search support.
+- No more internalization (i18n) support.
+- Automatic dark mode with the `prefers-color-scheme` CSS media feature.
+- Removed fonts hosted on Google Fonts, now they are included in the theme as a fallback if the web safe fonts are not available.
+- Added Archive page.
+- Comment support.
+- Share page widget.
+- Table of contents support.
+- Basic support for Twitter Cards.
+- Fixed color contrast to follow WebAIM's minimum AA guidelines.
 
 ### Example config:
 
@@ -61,8 +74,12 @@ canonifyURLs= true
   description = "for the web scraping"
   author = "Author"
   banner= "/banner.png"
-# staticman_api = "http://your-staticman-url/v2/connect/GITHUB-USERNAME/GITHUB-REPOSITORY" #Add staticman API URL to enable staticman comments
+# staticman_api = "http://your-staticman-url/v2/connect/GITHUB-USERNAME/GITHUB-REPOSITORY"  Add staticman API URL to enable staticman comments https://pyxill2.netlify.app/post/staticman/ for more information
 # RssUrl = "https://feeds.feedburner.com/feed for analytics" 
+# google_analytics_id = "oVaXKQsxNsPoOo6UNrGbQrBTdxEOBP0qJBRMTScdg8U" (for Google Search Console ownership)
+# flattr_id = "e0v7jk"  (for Flattr ownership https://flattr.com/settings/connect/domain?redirect=%2Fsettings%2Fprofile%23connections)
+# payment_pointer = "$ilp.uphold.com/kk3ZPeDi34nP" (for Coil.com monetization)
+# google_analytics_js = false  (to enable the JS analytics )
   
 [author]
   name = "The Author"
