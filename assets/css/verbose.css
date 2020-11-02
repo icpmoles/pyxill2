@@ -2180,7 +2180,7 @@ article thead {
 }
 
 .twitter-tweet {
-    color: red;
+    color: var(--sec-text);
 }
 
 /* width */
