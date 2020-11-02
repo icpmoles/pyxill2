@@ -80,7 +80,13 @@ canonifyURLs= true
 # flattr_id = "e0v7jk"  (for Flattr ownership https://flattr.com/settings/connect/domain?redirect=%2Fsettings%2Fprofile%23connections)
 # payment_pointer = "$ilp.uphold.com/kk3ZPeDi34nP" (for Coil.com monetization)
 # google_analytics_js = false  (to enable the JS analytics )
+  js_privacy = true #uses locally hosted libraries instead of using their CDN
+  footer_menu = false #enables a footer navigation bar
+  custom_navbar = false #makes the main navbar editable
+  custom_footbar = false #maked the footbare editable 
   
+
+
 [author]
   name = "The Author"
 	

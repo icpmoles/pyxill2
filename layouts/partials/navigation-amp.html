@@ -1,7 +1,25 @@
+{{ if isset $.Site.Params "custom_navbar" }} 
+{{ if eq .Site.Params.custom_navbar true }}
 
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+<a  href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+{{ end }}
+
+{{ else }}
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}amp/about/" >{{ i18n "about" }}</a>
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}amp/contact/" >{{ i18n "contact" }}</a>
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}amp/privacy-policy/" rel="prefetch">{{ i18n "privacy" }}</a>
+
+{{ end }}
+{{ else }}
+<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}amp/about/" >{{ i18n "about" }}</a>
+<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}amp/contact/" >{{ i18n "contact" }}</a>
+<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}amp/privacy-policy/" rel="prefetch">{{ i18n "privacy" }}</a>
+{{ end }} 
+
+
+
 {{- if .Site.IsMultiLingual -}}
 {{- range $lang := .Site.Languages -}}
 {{- if ne $.Site.Language $lang -}}
@@ -9,9 +27,3 @@
 {{- end -}}
 {{- end -}}
 {{- end -}}
-{{ if isset .Site.Params "search_engine" }}
-<form class="navbar-search" action="{{ .Site.BaseURL }}/search/index.html"
-    onsubmit="return validateForm(this.elements['q'].value);">
-    <input type="text" class="search-query" placeholder="{{ i18n "search" }}" name="q" id="tipue_search_input">
-</form>
-{{ end }}
