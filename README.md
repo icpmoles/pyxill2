@@ -81,7 +81,7 @@ canonifyURLs= true
 # payment_pointer = "$ilp.uphold.com/kk3ZPeDi34nP" (for Coil.com monetization)
 # google_analytics_js = false  (to enable the JS analytics )
   js_privacy = true #uses locally hosted libraries instead of using their CDN
-  footer_menu = false #enables a footer navigation bar
+  footer_links = false #enables a footer navigation bar
   custom_navbar = false #makes the main navbar editable
   custom_footbar = false #maked the footbare editable 
   
@@ -132,6 +132,53 @@ canonifyURLs= true
       hardWraps = false
       unsafe = false
       xhtml = false
+
+[menu]
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = -90
+
+  [[menu.main]]
+    name = "Archive"
+    url = "/archive/"
+    weight = -100
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = -110
+
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = -120
+
+  [[menu.footer]]
+    name = "Privacy Policy"
+    url = "/privacy-policy/"
+    weight = -90
+
+  [[menu.footer]]
+    name = " | "
+    weight = -95
+
+  [[menu.footer]]
+    name = "Credits"
+    url = "/credits/"
+    weight = -100
+
+  [[menu.footer]]
+    name = "  | "
+    weight = -105
+
+  [[menu.footer]]
+    name = "Admin"
+    url = "/netlify/"
+    weight = -110
+
+
       
 
 ```
