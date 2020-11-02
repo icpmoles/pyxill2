@@ -5,13 +5,15 @@
           <small>
             Copyright &#169; 2017<br>
             Powered by <a rel="noopener noreferrer" href="https://gohugo.io/" target="_blank">Hugo</a> &amp; <a rel="noopener noreferrer" href="https://github.com/IcpMoles/pyxill2" target="_blank">Pyxill 2</a>
-          
+           
             <br>
+            {{ if isset $.Site.Params "footer_links" }} 
             <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}credits/" rel="prefetch">{{ i18n "credits" }}</a> <span> | </span>
             <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}privacy-policy/" rel="prefetch">{{ i18n "privacy" }}</a>
              {{ if isset $.Site.Params "staticman_api" }} <span> | </span> <a href="{{ .Site.BaseURL }}netlify" rel="prefetch">Admin</a> {{ end }}
 
             <br>
+            {{ end }}
             </small>
         </div>
       </div>
