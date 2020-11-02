@@ -1,0 +1,28 @@
+{
+    "name": "Pyxill2- Hugo Theme CHANGE ME",
+    "short_name": "Pyxill2",
+    "icons": [
+        {
+            "src": "/maskable_icon.png",
+            "sizes": "682x682",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#3b4252",
+    "background_color":"#4c566a",
+    "display": "standalone",
+    "start_url": "https://example.site/ CHANGE ME",
+    "lang": "en",
+    "description": "A minimal theme for Hugo CHANGE ME"
+}
