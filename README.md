@@ -142,7 +142,7 @@ canonifyURLs= true
 
   [[menu.main]]
     name = "Archive"
-    url = "/archive/"
+    url = "/archives/"
     weight = -100
 
   [[menu.main]]
