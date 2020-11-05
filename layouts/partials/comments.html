@@ -34,7 +34,24 @@
       {{ range $index, $comments := (index $.Site.Data.comments $entryId ) }}
         <div class="post-comment">
           <div class="post-comment-header">
-            <img class="post-comment-avatar" src="https://seccdn.libravatar.org/avatar/{{ .email }}?s=100">
+            <img  class="post-comment-avatar"  
+            
+         
+            {{ if eq $.Site.Params.avatar "libravatar" }} 
+            src="https://seccdn.libravatar.org/avatar/{{ .email }}?s=100"
+            {{else}}
+              {{ if eq $.Site.Params.avatar "gravatar"  }} 
+              src="https://www.gravatar.com/avatar/{{ .email }}?s=100"
+              {{else}}
+                {{ if eq $.Site.Params.admin_hash .email  }} 
+                src="{{ .Site.BaseURL }}/admin.png"
+                {{else}}
+                src="{{ .Site.BaseURL }}/avatar.png"
+                {{end}}
+              {{ end }}
+            {{ end }}
+            
+            >
             <p class="post-comment-info post-meta"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
           </div>
           {{ .body | markdownify }}
