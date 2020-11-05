@@ -14,14 +14,14 @@
       <article class="post-content" itemprop="articleBody">
       {{ .Content | safeHTML}}
       </article>
-
+      {{ if isset .Params "tags" }}
       <p class="post-meta">{{ i18n "tags" }}:&nbsp;
         {{ range $i, $e := .Params.tags }}
             {{if $i}},&nbsp;{{end}}
             <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{ . }}/">{{ . }}</a>
         {{ end }}
       </p>
-
+      {{ end }}
       {{ partial "comments.html" . }}
     </div>
   </div>
