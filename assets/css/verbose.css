@@ -1,14 +1,14 @@
 
 :root {
-  --main-text: #333;
+  --main-text: #2E3440;
   --background-color: #fff;
-  --link-color: #287996;
-  --link-hover: #007199;
-  --sec-text: #595959;
-  --button-text: #333;
-  --button-background: #fafafa;
+  --link-color: #5E81AC;
+  --link-hover: #88C0D0;
+  --sec-text: #4C566A;
+  --button-text: #2E3440;
+  --button-background: #D8DEE9;
   --button-accent: #f3f3f3;
-  --button-disabled-background: #777;
+  --button-disabled-background: #ECEFF4;
   --button-disabled-background-hover: #444;
   --red:#BF616A;
   --green: #A3BE8C;
@@ -982,6 +982,7 @@ p {
 }
 
 .pagination .disabled {
+	visibility: hidden;
 	opacity: .5
 }
 
@@ -1076,6 +1077,13 @@ code {
 	font-weight: bold;
 	
 	
+}
+
+p code{
+	color:#4c566a;
+	background: #eceff4;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 pre>code{
@@ -1295,7 +1303,7 @@ footer {
 footer,
 footer .wrap {
 	color: #7a7a7a;
-	background-color: #fafafa;
+	background-color: #F2F4F8;
 	font-weight: 300;
 	clear: both
 }
@@ -1439,9 +1447,7 @@ footer .wrap {
 		filter: invert(80%)
 	}
 	
-        .anchor { 
-		filter: invert(1)
-	}
+       
 }
 
 
@@ -2111,12 +2117,8 @@ border-radius: .25rem
 
 .anchor:hover{opacity: 100%;}
 .anchor{
-	opacity: 0%;
-	font-size:50%;
-	vertical-align: middle;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    -webkit-transition: opacity .15s ease;
-    transition: opacity .15s ease;
+	opacity: 50%;
+	font-weight: bolder;
 }
 
 .toc_summary {
