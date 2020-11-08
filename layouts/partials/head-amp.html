@@ -102,19 +102,17 @@
     </script>
 	
 
-  <style amp-custom >{{ partial "ampstylesmart" | safeCSS }} 
-    
- @media (prefers-color-scheme: dark) {
-	 amp-social-share.custom-style {background-color: #4c566a;}
-	 .anchor { filter: invert(1);}
-}
 
-@media (prefers-color-scheme: light) {
-  amp-social-share.custom-style { background-color: #D8DEE9;}
-}
-	
-amp-social-share.custom-style { 
-	  background-position: center;
-	  background-size: contain;}
-  </style>
 
+<style  amp-custom >
+  {{ with resources.Get "css/verbose.css" | minify }}
+  {{ .Content | safeCSS }}
+  {{ end }}
+  {{ with resources.Get "critical.css" | minify }}
+  {{ .Content | safeCSS }}
+  {{ end }}
+  {{ with resources.Get "ampstyle.css" | minify }}
+  {{ .Content | safeCSS }}
+  {{ end }}
+
+</style>
