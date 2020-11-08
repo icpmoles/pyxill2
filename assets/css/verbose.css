@@ -1,24 +1,4 @@
 
-:root {
-  --main-text: #2E3440;
-  --background-color: #fff;
-  --link-color: #3e5471;
-  --link-hover: #55acee;
-  --sec-text: #4C566A;
-  --button-text: #2E3440;
-  --button-background: #D8DEE9;
-  --button-accent: #f3f3f3;
-  --button-disabled-background: #ECEFF4;
-  --button-disabled-background-hover: #444;
-  --red:#BF616A;
-  --green: #A3BE8C;
-  --orange: #D08770;
-  --yellow: #EBCB8B;
-  --purple: #B48EAD;
-}
-
-
-
 
 
 @charset "UTF-8";
@@ -1359,19 +1339,7 @@ footer .wrap {
 
 @media(prefers-color-scheme:dark) {
 	
-	:root {
-	  --main-text: #ECEFF4;
-	  --background-color: #3b4252;
-	  --link-color: #a0e2f5; /*! OLD: #81A1C1 */
-	  --link-hover: #5E81AC;
-	  --sec-text: #D8DEE9;
-	  --button-text: #3b4252;
-	  --button-background: #4c566a;
-	  --button-accent: #434C5E;
-	  --button-disabled-background: #4c566a;
-   	  --button-disabled-background-hover: #434c5e;
-	}
-	
+
 	
 	.button:focus {
 		box-shadow: 0 0 0 2px #3b4252, 0 0 1px 4px rgba(0, 150, 204, .5)
