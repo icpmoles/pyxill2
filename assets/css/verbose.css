@@ -560,8 +560,22 @@ img {
 	border-radius: .25rem;
 	transition-duration: .2s;
 	transition-timing-function: ease;
-	transition-property: box-shadow, background-color
+	transition-property: box-shadow, background-color;
+	
 }
+
+
+button.share{
+	border: 2px solid var( --button-accent);
+    background-color: var( --button-background);
+    color: var( --main-text);
+    display: inline-block;
+    font: inherit;
+    padding: 20px;
+   min-width: 30px;
+   border-radius: .1875em;
+}
+
 
 .border,
 .input {
@@ -969,7 +983,7 @@ p {
 	padding: 1.125em;
 }
 
-.pagination .disabled,
+.pagination disabled,
 .pagination a {
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
@@ -982,8 +996,8 @@ p {
 }
 
 .pagination .disabled {
-	visibility: hidden;
-	opacity: .5
+
+	opacity: .8
 }
 
 .pagination a:focus,
@@ -2188,7 +2202,8 @@ article thead {
 }
 
 .twitter-tweet {
-    color: var(--sec-text);
+	color: var(--sec-text);
+	border-left-color: #1DA1F2;
 }
 
 /* width */
