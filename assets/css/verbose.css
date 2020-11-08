@@ -973,7 +973,8 @@ p {
 }
 
 .pagination .disabled {
-
+	border-radius: .1875em;
+	padding: 1em 1.5em;
 	opacity: .8
 }
 
