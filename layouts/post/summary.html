@@ -8,9 +8,6 @@
   {{ if isset .Params "tags" }}
   {{ $baseurl := .Site.BaseURL }}
   <p class="post-meta">{{ i18n "tags" }}:&nbsp;
-  {{ range $i, $e := .Params.tags }}
-      {{if $i}},&nbsp;{{end}}
-      <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{lower . }}/">{{ . }}</a>
-  {{ end }}</p>
+  {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{lower . }}/">{{ . }}</a>{{ end }}</p>
   {{ end }}
 </div>
