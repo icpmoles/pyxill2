@@ -6,15 +6,13 @@
   {{ else }}
   <a class="pagination-item" aria-label="Newer articles" href="{{ .Paginator.Prev.URL }}">{{ i18n "newer" }}</a>
   {{ end }}
-  {{ else }}
-  <span class="pagination-item disabled" aria-label="Newer articles" disabled>{{ i18n "newer" }}</span>
+
   {{ end }}
   </div>
   <div class="right">
   {{ if .Paginator.HasNext }}
   <a class="pagination-item" aria-label="Older articles" href="{{ .Paginator.Next.URL }}">{{ i18n "older" }}</a>
-  {{ else }}
-  <span class="pagination-item disabled" aria-label="Older articles" disabled>{{ i18n "older" }}</span>
+
   {{ end }}
   </div>
 </div>
