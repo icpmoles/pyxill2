@@ -54,7 +54,7 @@
             >
             <p class="post-comment-info post-meta"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
           </div>
-          {{ .body | markdownify }}
+          {{ .body | markdownify | safeHTML }}
         </div>
       {{ end }}       
     {{ end }}
