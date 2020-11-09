@@ -12,7 +12,7 @@
        {{ partial "toc.html" . }}
       
       <article class="post-content" itemprop="articleBody">
-      {{ .Content | safeHTML}}
+      {{ .Content }}
       </article>
       {{ if isset .Params "tags" }}
       <p class="post-meta">{{ i18n "tags" }}:&nbsp;
