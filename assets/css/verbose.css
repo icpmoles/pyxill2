@@ -2047,9 +2047,9 @@ html {
   font: inherit;
   padding: 10px;
   margin-top: 20px;
-  border: 0.2rem solid var( --button-accent);
+  border: 0.2rem solid var( --form-accent);
   width: 100%;
-  background: var(--button-background);
+  background: var(--form-background);
   color: var(--sec-text);
   border-radius: .6rem;
   
