@@ -2232,3 +2232,13 @@ code::-webkit-scrollbar-thumb:hover {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+.blocktitle{
+	page-break-after: always;
+	font-weight: bold;
+	font-size: 2rem;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+	display: block;
+	
+}
