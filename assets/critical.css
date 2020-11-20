@@ -11,6 +11,7 @@
   --button-disabled-background-hover: #444;
   --form-background: #eceff4;
   --form-accent: #D8DEE9;
+  --quotebar:#4C566A;
   --red:#a7444e  ;
   --green: #739654;
   --orange: #b15539;
@@ -76,7 +77,8 @@ a {
 	  --button-disabled-background: #4c566a;
 	  --button-disabled-background-hover: #434c5e;
 	  --form-background: #4c566a;
-	  --form-accent: #434C5E;
+    --form-accent: #434C5E;
+    --quotebar: #D8DEE9;
 	}
 	
 	
