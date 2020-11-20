@@ -56,6 +56,11 @@ textarea {
 	font-size: 100%
 }
 
+article{
+	color: var(--main-text)
+
+}
+
 article,
 aside,
 details,
@@ -1029,7 +1034,6 @@ textarea.input {
 
 p {
 	line-height: 1.5;
-	color: var(--main-text)
 }
 
 abbr {
@@ -2099,6 +2103,7 @@ border-radius: .25rem
 .anchor{
 	opacity: 50%;
 	font-weight: bolder;
+	text-decoration: none;
 }
 
 .toc_summary {
@@ -2233,12 +2238,34 @@ code::-webkit-scrollbar-thumb:hover {
     overflow-y: hidden;
 }
 
+@font-face {
+	font-family: "color-emoji";
+	src: local("Apple Color Emoji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
+  } 
+
+
 .blocktitle{
 	page-break-after: always;
 	font-weight: bold;
 	font-size: 2rem;
 	padding-left: 1rem;
-	padding-bottom: 1rem;
 	display: block;
-	
+	line-height: 2.5rem;
+	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols , system-ui, color-emoji;
+
+}
+
+.notification-boxes{
+	color: #2e3440;
+	margin: 2rem 0rem;
+	padding: 1.33em;
+	border-left-width: 5px;
+	border-left-style: solid;
+	font-style: normal;
+}
+
+
+
+article a{
+	text-decoration: underline;
 }

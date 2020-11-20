@@ -24,6 +24,7 @@ Head to the tutorial from the [main blog](https://pyxill2.netlify.app/post/setup
 - AMP support.
 - MathJax support.
 - Homepage under 20KiB.
+- Alert boxes.
 
 ## Changes from Pixyll
 
@@ -84,6 +85,11 @@ canonifyURLs= true
   footer_links = false #enables a footer navigation bar
   custom_navbar = false #makes the main navbar editable
   custom_footbar = false #maked the footbare editable 
+  [params.alert]
+    warning="⚠️"
+    error="❗"
+    success="✔"
+    info="ℹ️"
   
 
 
