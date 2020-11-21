@@ -2178,9 +2178,14 @@ article thead {
 }
 
 .twitter-tweet {
-	color: var(--sec-text);
+	color: #4c566a;
 	border-left-color: #1DA1F2;
 	background-color: #9fd7f9;
+}
+
+.twitter-tweet a {
+	color: #20415b;
+	
 }
 
 /* width */
@@ -2274,4 +2279,8 @@ code::-webkit-scrollbar-thumb:hover {
 
 article a{
 	text-decoration: underline;
+}
+
+aside a{
+	color: #3e5471;
 }
