@@ -1,3 +1,3 @@
-<div  class="notification-boxes" style="color:var(--t-yellow);border-left-color: var(--yellow);background:var(--c-yellow)">
-    <span class="blocktitle" >{{ if isset .Site.Params.alert "warning" }}{{ .Site.Params.alert.warning }}{{ end }} {{ index .Params 0 }}</span><br>    {{ .Inner  | markdownify }}
-</div>
+<aside  class="notification-boxes" style="color:var(--t-yellow);border-left-color: var(--yellow);background:var(--c-yellow)">
+    <span class="blocktitle" >{{ if isset .Site.Params.alert "warning" }}{{ .Site.Params.alert.warning }}{{ end }} {{ index .Params 0 }}</span><br>   <p>  {{ .Inner  | markdownify }} </p> 
+</aside>

@@ -33,12 +33,12 @@
   --c-yellow: hsl(40, 71%, 80%);
   --c-purple: hsl(311, 20%, 80%);
   --c-blue: hsl(213, 32%, 80%);
-  --t-red: hsl(354, 42%, 30%);
-  --t-green: hsl(92, 28%, 30%);
-  --t-orange: hsl(14, 51%, 30%);
-  --t-yellow: hsl(40, 71%, 30%);
-  --t-purple: hsl(311, 20%, 30%);
-  --t-blue: hsl(213, 32%, 30%)
+  --t-red: hsl(354, 42%, 24%);
+  --t-green: hsl(92, 28%, 21%);
+  --t-orange: hsl(14, 51%, 23%);
+  --t-yellow: hsl(40, 71%, 20%);
+  --t-purple: hsl(311, 20%, 23%);
+  --t-blue: hsl(213, 32%, 23%)
   ;
 
 
