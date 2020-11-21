@@ -1100,9 +1100,9 @@ pre {
 }
 
 blockquote {
-	margin:0.5rem
-	;
-	padding: 0.8em;
+	margin-right: 0px;
+	padding-right: 0px;
+  	padding: 1.33em;
 	border-left: 5px solid var(--quotebar)
 }
 
@@ -1251,6 +1251,11 @@ h6 {
 	.social-icons .right {
 		text-align: center;
 		float: none
+	}
+
+	blockquote{
+		margin:0.5rem;
+		padding: 0.8em;
 	}
 }
 
