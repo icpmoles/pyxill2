@@ -2281,6 +2281,11 @@ article a{
 	text-decoration: underline;
 }
 
-aside a{
+aside a, .quote-color a{
 	color: #3e5471;
+}
+
+.quote-color{
+	font-style: normal;
+	color: #2e3440;
 }
