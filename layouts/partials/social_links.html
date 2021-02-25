@@ -1,12 +1,12 @@
 <nav class="social-icons icons">
 <a class="fa fa-rss rss" href= 
-{{ if isset .Site.Params "rssurl" }}
-	{{ .Site.Params.rssurl }}
-{{ else }}
-	"/post/index.xml"
-{{ end }}  aria-label="RSS"></a>
+{{ if isset .Site.Params "rssurl" }} {{ .Site.Params.rssurl }} {{ else }}"/post/index.xml" {{ end }}  aria-label="RSS"></a>
 
 {{ if isset .Site.Params "twitter_username" }}
 <a class="fa fa-twitter twitter" href="https://twitter.com/{{ .Site.Params.twitter_username }}" aria-label="Twitter"></a>
+{{ end }}
+
+{{ if isset .Site.Params "mastodon_profile" }}
+<a class="fa fa-mastodon mastodon" rel="me" href="{{ .Site.Params.mastodon_profile }}" aria-label="Mastodon"></a>
 {{ end }}
 </nav>
