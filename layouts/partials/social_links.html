@@ -3,7 +3,7 @@
 {{ if isset .Site.Params "rssurl" }} {{ .Site.Params.rssurl }} {{ else }}"/post/index.xml" {{ end }}  aria-label="RSS"></a>
 
 {{ if isset .Site.Params "twitter_username" }}
-<a class="fa fa-twitter twitter" href="https://twitter.com/{{ .Site.Params.twitter_username }}" aria-label="Twitter"></a>
+<a class="fa fa-twitter twitter" rel="me" href="https://twitter.com/{{ .Site.Params.twitter_username }}" aria-label="Twitter"></a>
 {{ end }}
 
 {{ if isset .Site.Params "mastodon_profile" }}
