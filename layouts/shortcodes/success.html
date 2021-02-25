@@ -1,0 +1,3 @@
+<aside class="notification-boxes" style="border-left-color:var(--green);background:var(--c-green);color: var(--t-green) ">
+    <span class="blocktitle" >{{ if isset .Site.Params.alert "success" }}{{ .Site.Params.alert.success }}{{ end }} {{ index .Params 0 }}</span><br>    <p> {{ .Inner  | markdownify }} </p> 
+</aside>

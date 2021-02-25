@@ -9,11 +9,40 @@
   --button-accent: #f3f3f3;
   --button-disabled-background: #ECEFF4;
   --button-disabled-background-hover: #444;
-  --red:#BF616A;
-  --green: #A3BE8C;
-  --orange: #D08770;
-  --yellow: #EBCB8B;
-  --purple: #B48EAD;
+  --form-background: #eceff4;
+  --form-accent: #D8DEE9;
+  --quotebar:#4C566A;
+  --red:#a7444e  ;
+  --green: #739654;
+  --orange: #b15539;
+  --yellow: #dea93f;
+  --purple: #8d5e84;
+  --blue: #50729b;
+  /*
+  --alpha: 0.25;
+  --c-red: 191, 97, 106;
+  --c-green: 163, 190, 140;
+  --c-orange: 208, 135, 112;
+  --c-yellow: 235, 203, 139;
+  --c-purple: 180, 142, 173;
+  */
+  --alpha: 0.25;
+  --c-red: hsl(354, 42%, 80%);
+  --c-green: hsl(92, 28%, 80%);
+  --c-orange: hsl(14, 51%, 80%);
+  --c-yellow: hsl(40, 71%, 80%);
+  --c-purple: hsl(311, 20%, 80%);
+  --c-blue: hsl(213, 32%, 80%);
+  --t-red: hsl(354, 42%, 24%);
+  --t-green: hsl(92, 28%, 21%);
+  --t-orange: hsl(14, 51%, 23%);
+  --t-yellow: hsl(40, 71%, 20%);
+  --t-purple: hsl(311, 20%, 23%);
+  --t-blue: hsl(213, 32%, 23%)
+  ;
+
+
+  
 }
 
 
@@ -31,7 +60,7 @@
 }
 
 a {
-	color: var(--link-color);
+  color: var(--link-color);
 }
 
 @media(prefers-color-scheme:dark) {
@@ -46,7 +75,10 @@ a {
 	  --button-background: #4c566a;
 	  --button-accent: #434C5E;
 	  --button-disabled-background: #4c566a;
-   	--button-disabled-background-hover: #434c5e;
+	  --button-disabled-background-hover: #434c5e;
+	  --form-background: #4c566a;
+    --form-accent: #434C5E;
+    --quotebar: #D8DEE9;
 	}
 	
 	
