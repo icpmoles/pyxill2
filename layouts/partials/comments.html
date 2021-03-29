@@ -32,8 +32,8 @@
 	
       {{ $.Scratch.Add "hasComments" 1 }}
       {{ range $index, $comments := (index $.Site.Data.comments $entryId ) }}
-        <div class="post-comment">
-          <div class="post-comment-header">
+        <div class="post-comment" style="background-color: #{{slicestr .email 0 6}};">
+          <div class="post-comment-header" >
             <img  class="post-comment-avatar"  
             
          
@@ -55,7 +55,9 @@
             <p class="post-comment-info post-meta"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
           </div>
           {{ .body | markdownify | safeHTML }}
+          {{ partial "avatar.html" (dict "hash" .email)  }} 
         </div>
+        
       {{ end }}       
     {{ end }}
   {{ end }}

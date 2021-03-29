@@ -1,0 +1,12 @@
+{{$scratch := newScratch}}
+{{ $scratch.Set "hash" "d959b6db5935acae2c0aeac2956f2c13"}}
+
+{{ $scratch.Set "color" (slicestr .hash 0 6) }}
+<div class="ip">{{$scratch.Get "color"}}</div>
+<div>{{.hash}}</div>
+<div>{{slice "0" "0" "0"}}</div>
+<div>{{slice "0" "0" "0"}}</div>
+<div>{{slice "0" "0" "0"}}</div>
+<div>{{slice "0" "0" "0"}}</div>
+<div>{{slice "0" "0" "0"}}</div>
+<div>{{slice "0" "0" "0"}}</div>
