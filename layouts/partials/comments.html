@@ -44,9 +44,9 @@
               src="https://www.gravatar.com/avatar/{{ .email }}?s=100"
               {{else}}
                 {{ if eq $.Site.Params.admin_hash .email  }} 
-                src="{{ .Site.BaseURL }}/admin.png"
+                src="/admin.png"
                 {{else}}
-                src="{{ .Site.BaseURL }}/avatar.png"
+                src="/avatar.png"
                 {{end}}
               {{ end }}
             {{ end }}
@@ -69,7 +69,7 @@
 
   <form class="post-new-comment" method="POST" action={{$.Site.Params.staticman_api}} aria-label="Add a comment">
   <!--form class="post-new-comment" method="POST" action="http://localhost:8055/v2/entry/eduardoboucas/staticman-test/master/comments"-->
-    <input type="hidden" name="options[redirect]" value= "{{ .Site.BaseURL }}{{ .RelPermalink }}#comment-submitted">
+    <input type="hidden" name="options[redirect]" value= "{{ .RelPermalink }}#comment-submitted">
     <input type="hidden" name="options[entryTitle]" value="{{ .Title }}" >	  
     <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
     <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" aria-label="Input area for your name" required="required">

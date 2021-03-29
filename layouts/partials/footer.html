@@ -17,9 +17,9 @@
                 
               {{ else }}
                 
-                <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}credits/" rel="prefetch">{{ i18n "credits" }}</a> <span> | </span>
-                <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}privacy-policy/" rel="prefetch">{{ i18n "privacy" }}</a>
-                {{ if isset $.Site.Params "staticman_api" }} <span> | </span> <a href="{{ .Site.BaseURL }}netlify" rel="prefetch">Admin</a> {{ end }}
+                <a href="/{{ .Site.LanguagePrefix }}credits/" rel="prefetch">{{ i18n "credits" }}</a> <span> | </span>
+                <a href="/{{ .Site.LanguagePrefix }}privacy-policy/" rel="prefetch">{{ i18n "privacy" }}</a>
+                {{ if isset $.Site.Params "staticman_api" }} <span> | </span> <a href="/netlify" rel="prefetch">Admin</a> {{ end }}
 
                 <br>
                 {{ end }}

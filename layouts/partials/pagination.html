@@ -2,7 +2,7 @@
   <div class="left">
   {{ if .Paginator.HasPrev }}
   {{ if eq .Paginator.PageNumber 2 }}
-  <a class="pagination-item" href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}">{{ i18n "newer" }}</a>
+  <a class="pagination-item" href="/{{ .Site.LanguagePrefix }}">{{ i18n "newer" }}</a>
   {{ else }}
   <a class="pagination-item" aria-label="Newer articles" href="{{ .Paginator.Prev.URL }}">{{ i18n "newer" }}</a>
   {{ end }}
