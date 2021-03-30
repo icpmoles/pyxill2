@@ -18,6 +18,7 @@
   --yellow: #dea93f;
   --purple: #8d5e84;
   --blue: #50729b;
+  --img-wrapper: #D8DEE9;
   /*
   --alpha: 0.25;
   --c-red: 191, 97, 106;
@@ -79,6 +80,7 @@ a {
 	  --form-background: #4c566a;
     --form-accent: #434C5E;
     --quotebar: #D8DEE9;
+    --img-wrapper: #434C5E;
 	}
 	
 	

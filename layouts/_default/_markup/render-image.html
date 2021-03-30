@@ -1,1 +1,1 @@
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+<img alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}  src="{{ .Destination | safeURL }}"  />

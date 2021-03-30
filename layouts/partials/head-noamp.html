@@ -57,27 +57,19 @@
 <meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
 {{ end }}
 	
-  <!-- Highlight -->
-  <!-- Also minified and combined into combined-min.css
-  <link rel="stylesheet" type="text/css" href="/css/highlight/styles/railscasts.css"> -->
+{{ partial "google_analytics.html" . }}
+
+{{ $style := resources.Get "/css/verbose.css" | resources.Minify }}
+
+<link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
+<link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
 
-  <!-- Fonts -->
-  <!-- Combined and minified
-  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic'>
-  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato:900,300'> 
-  <link rel="preload" as="image"  href="/images/icons/twitter.png">
-  <link rel="preload" as="image"  href="/images/icons/rss.png">
-  -->
+<!--  CRITCAL INLINE CSS -->
 
-  {{ $style := resources.Get "/css/verbose.css" | resources.Minify  }}
-	
-  <link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
-  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
-
-
- <!--  <link rel="preload" as="style" type="text/css" href="/css/verbose.css">
-  <link rel="stylesheet" type="text/css" href="/css/verbose.css"> -->
+{{ with resources.Get "critical.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
   
 </head>
 <body class="">
