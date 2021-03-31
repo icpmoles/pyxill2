@@ -2303,18 +2303,19 @@ aside a, .quote-color a{
 	
 }
 
-.img-wrapper{
+article .img-wrapper{
  background-color: var(--img-wrapper)
 }
 
-.title-img{
+article .title-img{
 	padding: 15px 30px 10px 5px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", 'Helvetica Neue', Helvetica, Lato, sans-serif;
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:100em) {
 	
 
-	.img-wrapper:hover {
+	article .img-wrapper:hover {
 		-ms-transform: scale(1.6); /* IE 9 */
 		-webkit-transform: scale(1.6); /* Safari 3-8 */
 		transform: scale(1.6); 
@@ -2328,16 +2329,3 @@ aside a, .quote-color a{
 }
 
 
-@media screen and (min-width:48em) and (max-width:64em) {
-	.img-wrapper:hover {
-		-ms-transform: scale(1.2); /* IE 9 */
-		-webkit-transform: scale(1.2); /* Safari 3-8 */
-		transform: scale(1.2); 
-		-webkit-transition-delay: 1s;
-		-moz-transition-delay: 1s;
-		-ms-transition-delay: 1s;
-		-o-transition-delay: 1s;
-		transition-delay: 1s;
-		
-	  }
-}
