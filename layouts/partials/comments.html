@@ -24,7 +24,7 @@
   {{ $comments := readDir "data/comments" }}
   {{ $.Scratch.Add "hasComments" 0 }}
 
-  {{ $entryId := print  .Title "-" .File.UniqueID }}
+  {{ $entryId := print  .File.LogicalName "-" .File.UniqueID }}
 
   {{ range $comments }}
 	
@@ -70,7 +70,7 @@
   <form class="post-new-comment" method="POST" action={{$.Site.Params.staticman_api}} aria-label="Add a comment">
   <!--form class="post-new-comment" method="POST" action="http://localhost:8055/v2/entry/eduardoboucas/staticman-test/master/comments"-->
     <input type="hidden" name="options[redirect]" value= "{{ .Site.BaseURL }}{{ .RelPermalink }}#comment-submitted">
-    <input type="hidden" name="options[entryTitle]" value="{{ .Title }}" >	  
+    <input type="hidden" name="options[entryTitle]" value="{{ .File.LogicalName}}" >	  
     <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
     <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" aria-label="Input area for your name" required="required">
     <input name="fields[email]" type="email" class="post-comment-field email" placeholder="Your email address" aria-label="Input area for your email address" required="required"> 
