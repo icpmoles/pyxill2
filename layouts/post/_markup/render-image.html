@@ -1,8 +1,35 @@
-<figure class="img-wrapper">
-{{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
-<a href="{{ .Destination | safeURL }}" target="_blank">
 
-<img class="post-img" src="{{ .Destination  }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
-</a>
-{{ with .Text}}   <figcaption class="small"> {{ . }}</figcaption> {{ end }}
+<figure class="img-wrapper">
+    {{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
+  
+    {{ if hugo.IsExtended }}
+
+    {{ $image := .Page.Resources.GetMatch .Destination }}
+    {{ if gt $image.Width 780 }}
+        {{ $image = $image.Resize "780x webp" }}
+    {{ end }}
+
+    <source srcset="{{ $image.RelPermalink | safeURL }}" type="image/webp">
+    {{ end }}
+    
+    
+    {{ $image := .Page.Resources.GetMatch .Destination }}
+    {{ if gt $image.Width 780 }}
+        {{ $image = $image.Resize "780x" }}
+    {{ end }}
+    <div class="container">
+    <img 
+    class="post-img" 
+    src="{{ $image.RelPermalink | safeURL }}" 
+    alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} 
+    loading="lazy"
+     width="{{$image.Width}}" 
+     height="{{$image.Height}}"
+   
+     />
+     <a href="{{ .Destination | safeURL }}" target="_blank"  class="fullscreen-container">
+     
+    </a>
+</div>
+    {{ with .Text}}   <figcaption class="small"> {{ . }}</figcaption> {{ end }}
 </figure>
