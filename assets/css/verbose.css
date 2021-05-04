@@ -2315,7 +2315,7 @@ article .title-img{
 @media screen and (min-width:100em) {
 	
 
-	article .img-wrapper:hover {
+	article figure:hover {
 		-ms-transform: scale(1.6); /* IE 9 */
 		-webkit-transform: scale(1.6); /* Safari 3-8 */
 		transform: scale(1.6); 
@@ -2328,4 +2328,13 @@ article .title-img{
 	  }
 }
 
+figure{
+	margin:0
+}
 
+figcaption{
+	padding: 8px 45px 5px 45px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-style: italic;
+	
+}

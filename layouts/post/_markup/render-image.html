@@ -1,8 +1,8 @@
-<div class="img-wrapper">
+<figure class="img-wrapper">
 {{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
 <a href="{{ .Destination | safeURL }}" target="_blank">
 
-<img class="post-img" src="{{ .Destination | absURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+<img class="post-img" src="{{ .Destination  }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
 </a>
-
-</div>
+{{ with .Text}}   <figcaption class="smile"> {{ . }}</figcaption> {{ end }}
+</figure>
