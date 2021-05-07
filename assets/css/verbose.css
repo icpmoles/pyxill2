@@ -110,7 +110,8 @@ h5,
 h6,
 ol,
 p,
-ul {
+ul,
+table {
 	font-size: 1.125rem;
 	line-height: 1.5rem
 }
@@ -1195,7 +1196,8 @@ h6 {
 	}
 	.p,
 	li,
-	p {
+	p,
+	table {
 		font-size: 1.25rem;
 		line-height: 1.8
 	}
