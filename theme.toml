@@ -5,7 +5,7 @@ license = "MIT"
 source_repo = "https://github.com/IcpMoles/pyxill2"
 tags = ["blog", "personal", "search", "responsive", "minimal"]
 features = ["minimal js", "local fonts", "fast", "responsive", "dark mode", "nord theme palette", "mathjax"]
-min_version = "0.65.1"
+min_version = "0.83.0"
 
 
 
