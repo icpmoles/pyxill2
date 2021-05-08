@@ -393,10 +393,9 @@ img {
 }
 
 .p-responsive {
-	padding: 1.5rem;
+	padding: 0.5rem;
 	padding-top: 2rem;
-	padding-right: 1.5rem;
-	padding-left: 1.5rem
+	
 }
 
 .px-responsive {
