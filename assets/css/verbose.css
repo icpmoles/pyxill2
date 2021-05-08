@@ -252,7 +252,8 @@ img {
 }
 
 .mt2 {
-	margin-top: 2rem
+	padding-top: 4rem;
+	padding-bottom: 2rem
 }
 
 .mr2 {
@@ -442,33 +443,45 @@ img {
 
 @media screen and (min-width:64em) {
 	.m-responsive {
-		margin: 4rem
+		margin: 2rem
 	}
 	.mt-responsive {
-		margin-top: 4rem
+		margin-top: 2rem
 	}
 	.mr-responsive {
-		margin-right: 4rem
+		margin-right: 2rem
 	}
 	.mb-responsive {
-		margin-bottom: 4rem
+		margin-bottom: 2rem
 	}
 	.ml-responsive {
-		margin-left: 4rem
+		margin-left: 2rem
 	}
 	.p-responsive {
 		padding: 1rem;
 		padding-top: 2rem;
-		padding-right: 4rem;
-		padding-left: 4rem
+		padding-right: 2rem;
+		padding-left: 2rem
 	}
 	.px-responsive {
-		padding-right: 4rem;
-		padding-left: 4rem
+		padding-right: 2rem;
+		padding-left: 2rem
 	}
 	.py-responsive {
 		padding-top: 2rem;
 		padding-bottom: 4rem
+	}
+
+	.site-wrap{
+		margin-left: 10rem;  
+		margin-right: 10rem;
+	}
+
+	
+	.mt2 {
+		margin-top: 6rem;
+		padding-top: 4rem;
+		padding-bottom: 2rem
 	}
 }
 
@@ -865,8 +878,14 @@ img {
 }
 
 .site-wrap {
+	border-radius: 1.2rem;
+	border: thin var(--border-accent);
 	min-height: 100%;
-	margin-bottom: -120px
+	
+	
+    padding-bottom: 4rem;
+	margin-bottom: 120px;
+	background-color: var(--wrapper-color)
 }
 
 
@@ -1298,7 +1317,7 @@ h6 {
 }
 
 footer {
-	border-top: thin solid #f3f3f3;
+	border-top: thin solid var(--border-accent);
 	margin-top:120px;
     left: 0;
     bottom: 0;

@@ -1,6 +1,7 @@
 :root {
   --main-text: #2E3440;
   --background-color: #fff;
+  --wrapper-color: #f2f4f8;
   --link-color: #3e5471;
   --link-hover: #55acee;
   --sec-text: #4C566A;
@@ -19,6 +20,7 @@
   --purple: #8d5e84;
   --blue: #50729b;
   --img-wrapper: #D8DEE9;
+  --border-accent:#434C5E;
   /*
   --alpha: 0.25;
   --c-red: 191, 97, 106;
@@ -68,7 +70,9 @@ a {
 	
 	:root {
 	  --main-text: #ECEFF4;
-	  --background-color: #3b4252;
+	  --background-color: #2E3440;
+    
+    --wrapper-color: #3b4252;
 	  --link-color: #a0e2f5; /*! OLD: #81A1C1 */
 	  --link-hover: #5E81AC;
 	  --sec-text: #D8DEE9;
@@ -81,6 +85,7 @@ a {
     --form-accent: #434C5E;
     --quotebar: #D8DEE9;
     --img-wrapper: #434C5E;
+    --border-accent: #f3f3f3;
 	}
 	
 	
