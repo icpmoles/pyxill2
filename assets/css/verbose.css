@@ -1485,7 +1485,7 @@ html {
 /*! Pagination */
 .paginatin_area {
 	margin: 0;
-	padding: 4px 0 94px;
+	padding: 4px 0 2rem;
 	text-align: center
 }
 
@@ -2128,7 +2128,7 @@ border-radius: .25rem
 }
 
 .staticman {
- padding-bottom: 120px
+ padding-bottom: 2rem
 }
 
 .anchor:hover{opacity: 100%;}
