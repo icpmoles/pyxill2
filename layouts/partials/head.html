@@ -5,11 +5,11 @@
 
   <meta name="referrer" content="no-referrer">
   <!-- AMP ref -->
-  {{ if ne .Params.latex true  }}    
+   
 
-  <link rel="amphtml" href="{{ .Site.BaseURL }}amp{{ .Page.RelPermalink }}">
+  {{ if ne .Params.latex true  }}<link rel="amphtml" href="{{ .Site.BaseURL }}amp{{ .Page.RelPermalink }}">{{ end }}
 
-{{ end }}
+
   <!-- favicon and co. -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -54,15 +54,15 @@
   <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
 	{{ end }}
 
-  <!-- Flattr  -->
-{{ if isset .Site.Params "flattr_id" }}
-  <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
-{{ end }}
-	
-	<!-- Coil  -->
-{{ if isset .Site.Params "payment_pointer" }}
-<meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
-{{ end }}
+    <!-- Flattr  -->
+  {{ if isset .Site.Params "flattr_id" }}
+    <meta name="flattr:id" content="{{ .Site.Params.flattr_id }}">
+  {{ end }}
+    
+    <!-- Coil  -->
+  {{ if isset .Site.Params "payment_pointer" }}
+  <meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
+  {{ end }}
 
 	<!-- Webmention  -->
   <link rel="authorization_endpoint"  href="https://indieauth.com/auth">
