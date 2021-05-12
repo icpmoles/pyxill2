@@ -63,6 +63,12 @@
 {{ if isset .Site.Params "payment_pointer" }}
 <meta name="monetization" content="{{ .Site.Params.payment_pointer }}">
 {{ end }}
+
+	<!-- Webmention  -->
+  <link rel="authorization_endpoint"  href="https://indieauth.com/auth">
+  {{ if isset .Site.Params "webmention" }}<link rel="webmention" href="{{ .Site.Params.webmention }}" />{{ end }}
+  {{ if isset .Site.Params "pingback" }}<link rel="pingback" href="{{ .Site.Params.pingback }}" />{{ end }}
+
 	
 	<!-- MATH Rendering -->
   {{ partial "math.html" . }}
