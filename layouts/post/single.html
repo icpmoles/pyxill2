@@ -1,17 +1,17 @@
 {{ partial "head.html" . }}
 <div class="site-wrap">
   {{ partial "header.html" . }}
-  <div class="post p2 p-responsive wrap" role="main">
+  <div class="post p2 p-responsive wrap h-entry role="main">
     <div class="measure"  itemscope itemtype="http://schema.org/BlogPosting">
       <div class="post-header mb2">
-        <h1 itemprop="name" class="py2">{{ .Title }}</h1>
+        <h1 itemprop="name" class="py2 p-name">{{ .Title }}</h1>
         <span class="post-meta" itemprop="datePublished" content={{ .Date.Format "2006-01-02" }} ><time datetime={{ .Date.Unix  }} aria-label="Article published the {{ .Date.Format "02/01/2006"}}" >{{ .Date.Format "Jan 2, 2006" }}</time> by <u  itemprop="author" itemscope="" itemtype="http://schema.org/Person" ><ins itemprop="name">{{ .Params.author }}</ins></u></span><br>
         {{ $baseurl := .Site.BaseURL }}
       </div>
       
        {{ partial "toc.html" . }}
       
-      <article class="post-content" itemprop="articleBody">
+      <article class="post-content e-content" itemprop="articleBody">
       {{ .Content }}
       </article>
       {{ if isset .Params "tags" }}
