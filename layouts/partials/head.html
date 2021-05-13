@@ -50,8 +50,8 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
   <!-- Google site verification -->
-	{{ if isset .Site.Params "google_analytics_id" }}
-  <meta name="google-site-verification" content="{{ .Site.Params.google_analytics_id }}" />
+	{{ if isset .Site.Params "google_site_verification" }}
+  <meta name="google-site-verification" content="{{ .Site.Params.google_site_verification }}" />
 	{{ end }}
 
     <!-- Flattr  -->
@@ -73,7 +73,7 @@
 	<!-- MATH Rendering -->
   {{ partial "math.html" . }}
 
-  <!-- Google Anlytics -->
+  <!-- Google Analytics -->
   {{ partial "google_analytics.html" . }}
 
   {{ $style := resources.Get "/css/verbose.css" | resources.Minify }}
