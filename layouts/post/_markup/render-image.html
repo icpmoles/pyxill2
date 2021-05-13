@@ -1,15 +1,14 @@
 
 <figure class="img-wrapper">
     {{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
-  
-    {{ if hugo.IsExtended }}
-
     {{ $image := .Page.Resources.GetMatch .Destination }}
+    
     {{ if gt $image.Width 780 }}
-        {{ $image = $image.Resize "780x webp" }}
+    {{ if hugo.IsExtended }} 
+        <source srcset="{{ ($image.Resize "780x webp" ).RelPermalink | safeURL }}" type="image/webp">
     {{ end }}
-
-    <source srcset="{{ $image.RelPermalink | safeURL }}" type="image/webp">
+    {{ $image = $image.Resize "780x jpg" }}
+    <source srcset="{{ $image.RelPermalink | safeURL }}" type="image/jpeg">
     {{ end }}
     
     
@@ -25,11 +24,8 @@
     loading="lazy"
      width="{{$image.Width}}" 
      height="{{$image.Height}}"
-   
      />
-     <a href="{{ .Destination | safeURL }}" target="_blank"  class="fullscreen-container">
-     
-    </a>
+     <a href="{{ .Destination | safeURL }}" target="_blank"  class="fullscreen-container"> </a>
 </div>
     {{ with .Text}}   <figcaption class="small"> {{ . }}</figcaption> {{ end }}
 </figure>
