@@ -890,7 +890,12 @@ img {
 
 .gist,
 .gist .highlight .p {
-	font-size: .75rem
+	font-size: .75rem;
+    font-family: Cascadia Code,Menlo,Monaco,courier new,monospace;
+    overflow: auto;
+    max-width: 100%;
+    background-color: #282a36;
+    overflow-y: hidden;
 }
 
 .gist .lines {
@@ -2162,26 +2167,31 @@ border-radius: .25rem
 /* TABLE */
 
 article table {
-	display: table;
-		overflow-x: auto;
-	border-spacing: 0;
+	display: block;
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	margin: 0 auto;
+	overflow-x: auto;
+	white-space: nowrap;
 	
 	text-align: left;
 	width: 100%;
 	background-color: var(--button-accent);
+	border-collapse: collapse;
 }
 
 article td,
 article th {
-	border-bottom: .2rem solid var(--background-color);
+	border-top: .1rem solid var(--border-accent);
+	border-bottom: .1rem solid var(--border-accent);
 	padding: 1.2rem 1.5rem;
-	border: 1px solid var(--sec-text);/*  inner column border */
-	border-left: 1px;
-	border-right: 1px;
+	border-left: 1px solid var(--border-accent);
+	border-right: 1px solid var(--border-accent);
     font-size: inherit;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
 	padding: 0.5em 1em; 
+	
 	
 }
 
@@ -2370,8 +2380,9 @@ figcaption{
 	color: white;
   }
 
-table pre {
-	padding: 1rem 0
+.highlight pre {
+	padding: 1rem 0;
+	margin-bottom: 0;
 }
 
 
