@@ -80,8 +80,12 @@
   {{ $style := resources.Get "/css/verbose.css" | resources.Minify }}
 	
   <link rel="preload" as="style" type="text/css" href="{{ $style.Permalink }}">
-  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}">
 
+
+  {{ $style := resources.Get "/css/print.css" | resources.Minify }}
+	
+  <link rel="stylesheet" type="text/css" media="print" href="{{ $style.Permalink }}">
 
   <!--  CRITCAL INLINE CSS -->
 

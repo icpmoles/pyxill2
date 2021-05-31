@@ -156,6 +156,16 @@ small {
 		font-size: 3rem;
 		line-height: 3.5rem
 	}
+
+	pre {
+		margin-bottom: .88em;
+		width:60rem;
+		max-width: 60rem;
+		margin-left: -7rem;
+		position: relative;
+		overflow-x: auto;
+	}
+	
 }
 
 .bold,
@@ -472,8 +482,8 @@ img {
 	}
 
 	.site-wrap{
-		margin-left: 10rem;  
-		margin-right: 10rem;
+		max-width: 78rem;
+		margin: 0 auto;
 	}
 
 	
@@ -481,6 +491,10 @@ img {
 		margin-top: 6rem;
 		padding-top: 4rem;
 		padding-bottom: 2rem
+	}
+
+	.highlight{
+		max-width: 70em;
 	}
 }
 
@@ -1069,10 +1083,11 @@ code,
 pre {
 	font-family: Cascadia Code, Menlo, Monaco, "Courier New", monospace;
 	overflow: auto;
-	max-width: 100%;
+	/*max-width:  1000px;*/
 	background-color:#282a36;
 	overflow-y: hidden;
 }
+
 
 .h1,
 .h2,
@@ -1088,18 +1103,19 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", 'Helvetica Neue', Helvetica, Lato, sans-serif
+	font-family: "Arial Nova", "Arial", "Lucida Sans","Unicode", "Lucida Grande", 'Helvetica Neue', Helvetica, Lato, sans-serif
 }
 
 code {
 	color: #f8f8f2;
 	word-wrap: break-word;
-	font-weight: bold;
-	
+
+	margin: 20px;
 	
 }
 
 p code{
+	margin: 0;
 	color:#4c566a;
 	background: #eceff4;
 	margin-top: 5px;
@@ -1109,13 +1125,14 @@ p code{
 pre>code{
 	
 	display: block;
+
 }
 
 pre {
 	padding: 1.125em;
 	font-size: 1rem;
 	line-height: 1.11;
-	margin-bottom: .88em
+
 }
 
 .highlight .p {
@@ -1282,6 +1299,14 @@ h6 {
 		margin:0.5rem;
 		padding: 0.8em;
 	}
+
+	pre {
+		padding: 0.5rem
+	}
+
+	code{
+		margin: 10px;
+	}
 }
 
 @media screen and (min-width:64em) {
@@ -1316,6 +1341,14 @@ h6 {
 		border-bottom: 0;
 		margin-bottom: .666em;
 		padding-bottom: 0
+	}
+
+	pre {
+		padding: 0.8rem
+	}
+
+	code{
+		margin: 15px;
 	}
 
 }
@@ -2180,6 +2213,15 @@ article table {
 	border-collapse: collapse;
 }
 
+div.highlight table{
+	display: inherit;
+	max-width:inherit;
+	max-width:inherit;
+	margin: 0 auto;
+	overflow-x: inherit;
+	white-space: inherit;
+}
+
 article td,
 article th {
 	border-top: .1rem solid var(--border-accent);
@@ -2299,8 +2341,6 @@ code::-webkit-scrollbar-thumb:hover {
 	padding-left: 1rem;
 	display: block;
 	line-height: 2.5rem;
-	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols , system-ui, color-emoji;
-
 }
 
 .notification-boxes{
@@ -2328,7 +2368,7 @@ aside a, .quote-color a{
 }
 
 .post-img{
-	width: 100%;
+	max-width: 100%;
 	transition: transform .3s ease-in-out;
 	
 }
@@ -2380,10 +2420,6 @@ figcaption{
 	color: white;
   }
 
-.highlight pre {
-	padding: 1rem 0;
-	margin-bottom: 0;
-}
 
 
 

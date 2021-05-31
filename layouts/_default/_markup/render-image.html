@@ -1,1 +1,8 @@
-<img alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}  src="{{ .Destination | safeURL }}"  />
+
+    <img 
+    class="post-img" 
+    src="{{ .Destination | safeURL }}" 
+    alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} 
+    loading="lazy"
+     >
+     <a href="{{ .Destination | safeURL }}" target="_blank"  class="fullscreen-container" aria-label="Fullscreen image"> </a>

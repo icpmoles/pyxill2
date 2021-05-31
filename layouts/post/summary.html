@@ -5,9 +5,9 @@
   <a class="post-link" href="{{ .RelPermalink }}" itemprop="url">
   <h2 class="h2 post-title"><div itemprop="name">{{ .Title }}</div> {{ if .Draft }}(draft){{end}}</h3></a>
   <P class="post-summary" itemprop="description, headline">{{ .Summary }}</p>
-  {{ if isset .Params "tags" }}
+  {{  if isset .Params "tags" }}
   {{ $baseurl := .Site.BaseURL }}
   <p class="post-meta">{{ i18n "tags" }}:&nbsp;
-  {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{lower . }}/">{{ . }}</a>{{ end }}</p>
+  {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{lower .| urlize }}/">{{ . }}</a>{{ end }}</p>
   {{ end }}
 </div>
