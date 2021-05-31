@@ -55,7 +55,7 @@ ignoreFiles = [ "\\.db$","\\.css$"]
 pygmentsUseClassic=false
 pygmentsStyle="dracula"
 pygmentsCodefences=true
-#pygmentsOptions="linenos=table"
+#pygmentsOptions="linenos=inline"
 Paginate= 10
 relativeURLs = false
 canonifyURLs= true
