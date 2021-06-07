@@ -934,7 +934,7 @@ img {
 
 .posts .post,
 .related-post-title, .archive {
-	border-bottom: thin solid #f3f3f3
+	border-bottom: thin solid var(--border-accent);
 }
 
 .site-nav a+a {
@@ -1250,7 +1250,7 @@ h6 {
 	.posts .post, .archive {
 		margin-bottom: 1.333em;
 		padding-bottom: .666em;
-		border-bottom: thin solid #f3f3f3
+		border-bottom: thin solid var(--border-accent);
 	}
 	.posts .post:last-child, .archive:last-child {
 		border-bottom: 0;
@@ -1335,7 +1335,7 @@ h6 {
 	.posts .post, .archive {
 		margin-bottom: 2.666em;
 		padding-bottom: 1.333em;
-		border-bottom: thin solid #f3f3f3
+		border-bottom: thin solid var(--border-accent);
 	}
 	.posts .post:last-child, .archive:last-child{
 		border-bottom: 0;
@@ -2404,7 +2404,8 @@ article img:hover {
 
 figure{
 	margin:0;
-	
+	width: fit-content;
+	border-radius: .3em;
 }
 
 figcaption{
