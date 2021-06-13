@@ -5,11 +5,9 @@
   <meta name="referrer" content="no-referrer">
   
   <!-- AMP ref -->
-   
-
-  {{ if ne .Params.latex true  }}<link rel="amphtml" href="{{ .Site.BaseURL }}amp{{ .Page.RelPermalink }}">{{ end }}
-
-
+  {{ range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+  {{ end }}
   <!-- favicon and co. -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
