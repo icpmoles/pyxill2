@@ -20,7 +20,8 @@
   <meta name="apple-mobile-web-app-title" content={{ .Site.Title }}>
   <meta name="application-name" content={{ .Site.Title }}>
   <meta name="msapplication-TileColor" content={{.Site.Params.bg_color}}>
-  <meta name="theme-color" content={{.Site.Params.bg_color}}>
+  <meta name="theme-color" content={{.Site.Params.bg_color}} media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content={{.Site.Params.bg_color_dark}} media="(prefers-color-scheme: dark)">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Access-Control-Allow-Origin" content="https://cloudflareinsights.com,https://www.google-analytics.com">
   <meta http-equiv="Vary" content="Origin">
