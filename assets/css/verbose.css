@@ -489,9 +489,31 @@ img {
 		max-width: 70em;
 	}
 
-	p,  h1,  h2,  h3,  h4,  h5 ,  h6, .site-header, .post-header, .posts, .archive, .staticman, .pagination ,ul, ol, .post-meta, .meta{
+	p:not(aside p, blockquote p), 
+	h1,  
+	h2,  
+	h3,  
+	h4,  
+	h5 ,  
+	h6,
+	 .site-header, 
+	 .post-header, 
+	 .posts, 
+	 .archive, 
+	 .staticman, 
+	 .pagination ,
+	 ul, 
+	 ol, 
+	 .post-meta, 
+	 .meta, 
+	 .toc_title{
 		max-width: 48rem;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	aside *, blockquote *{
+		max-width: none
 	}
 }
 
@@ -1166,7 +1188,7 @@ h5,
 h6 {
 	font-weight: 900;
 	line-height: 1.2;
-	/*margin: .414em 0 .5em;*/
+	margin: .414em auto .5em;
 }
 
 
