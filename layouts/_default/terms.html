@@ -6,16 +6,20 @@
           <div class="post-header mb2">
             <h1 class="py2" itemscope="" itemtype="http://schema.org/WebPage" itemprop="name">{{ .Title }} </h1>
           </div>
+          <ul>
     {{- $type := .Type }}
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}
     {{- $count := .Count }}
+    
     {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
     <li>
-        <a href="{{ .Permalink }}">{{ .Name }}</a> - {{ $count }} 
+        <a href="{{ .Permalink }}" class="tag">{{ .Name }}</a> - {{ $count }} 
     </li>
     {{- end }}
+  
     {{- end }}
+  </ul>
 </div>
 </div>
 </div>

@@ -156,15 +156,6 @@ small {
 		font-size: 3rem;
 		line-height: 3.5rem
 	}
-
-	pre {
-		margin-bottom: .88em;
-		width:60rem;
-		max-width: 60rem;
-		margin-left: -7rem;
-		position: relative;
-		overflow-x: auto;
-	}
 	
 }
 
@@ -189,11 +180,11 @@ strong {
 .right-align {
 	text-align: right
 }
-
+/*
 .measure {
 	max-width: 48rem
 }
-
+*/
 .measure-narrow {
 	max-width: 32rem
 }
@@ -318,11 +309,12 @@ img {
 	margin-left: 4rem
 }
 
+/*
 .wrap {
 	margin-right: auto;
 	margin-left: auto
 }
-
+*/
 .m-responsive {
 	margin: 2rem
 }
@@ -495,6 +487,11 @@ img {
 
 	.highlight{
 		max-width: 70em;
+	}
+
+	p,  h1,  h2,  h3,  h4,  h5 ,  h6, .site-header, .post-header, .posts, .archive, .staticman, .pagination ,ul, ol, .post-meta, .meta{
+		max-width: 48rem;
+		margin: 0 auto;
 	}
 }
 
@@ -916,6 +913,9 @@ img {
 	width: 100%
 }
 
+
+
+
 .site-header a {
 	color: var(--main-text);
 	font-weight: 300
@@ -953,9 +953,6 @@ img {
 	opacity: .88
 }
 
-.posts {
-	margin: 0
-}
 
 .posts .post, .archive{
 	margin-bottom: .75em;
@@ -1030,16 +1027,16 @@ p {
 .pagination a:active {
 	background: #f7f7f7
 }
-
+ /*
 .wrap .measure {
 	margin: 0 auto
 }
-
+*/
 .meta,
 .post-meta {
 	width: auto;
 	font-size: 1rem;
-	margin: 0;
+	
 	padding: .25em 0;
 	color: var(--sec-text)
 }
@@ -1169,7 +1166,7 @@ h5,
 h6 {
 	font-weight: 900;
 	line-height: 1.2;
-	margin: .414em 0 .5em;
+	/*margin: .414em 0 .5em;*/
 }
 
 
@@ -1212,12 +1209,7 @@ h6 {
 	.site-header .site-title {
 		float: left
 	}
-	.meta,
-	.post-meta {
-		margin: 0;
-		padding: 0;
-		font-size: 1.25rem
-	}
+	
 	.h1,
 	h1 {
 		font-size: 3.25rem
@@ -2182,7 +2174,7 @@ article img:hover {
 
 figure{
 	margin:0;
-	width: fit-content;
+	width: 100%;
 	border-radius: .3em;
 }
 
