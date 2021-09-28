@@ -2210,7 +2210,7 @@ figcaption{
 .container {
 	position: relative;
 	text-align: center;
-	color: white;
+	color: var(--main-text);
   }
 
 
