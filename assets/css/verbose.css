@@ -2166,15 +2166,25 @@ article img:hover {
 
 figure{
 	margin:0;
-	width: 100%;
+	max-width: 100%;
 	border-radius: .3em;
 }
 
 figcaption{
-	padding: 8px 45px 5px 45px;
+	max-width: 100%;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-style: italic;
-	
+	margin: auto;
+	background-color: var(--link-hover);
+	display: block;
+	float: left;
+	position: absolute;
+	bottom: 0;
+	opacity: 0.6;
+	transition: transform .3s ease-in-out;
+}
+figure:hover figcaption{
+	opacity: 1
 }
 
 .container {
@@ -2188,3 +2198,5 @@ figcaption{
 .html-video{
 	max-width: 100%;
 }
+
+
