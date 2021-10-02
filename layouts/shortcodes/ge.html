@@ -1,0 +1,5 @@
+{{ $original := .Page.Resources.GetMatch (printf "%s*" (.Get 0) ) }}
+
+<a class="spotlight" href="{{ $original.RelPermalink | safeURL }}">
+    <img src="{{ ($original.Fill "200x200 smart" ).RelPermalink | safeURL }}">
+</a>

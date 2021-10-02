@@ -102,6 +102,9 @@
   {{ end }}
 
   {{ partial "head_hook.html" . }}
-
+  {{if .HasShortcode "gallery"}}
+  <script src="/simplelightbox/simple-lightbox.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/simplelightbox/simple-lightbox.min.css">
+  {{end}}
 </head>
 <body class=""></body>
