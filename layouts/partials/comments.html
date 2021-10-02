@@ -32,7 +32,7 @@
 	
       {{ $.Scratch.Add "hasComments" 1 }}
       {{ range $index, $comments := (index $.Site.Data.comments $entryId ) }}
-        <div class="post-comment">
+        <div class="post-comment {{ if eq $.Site.Params.admin_hash .email  }} post-comment-admin {{end}}">
           <div class="post-comment-header">
             <img  class="post-comment-avatar"  
             
@@ -54,7 +54,7 @@
             >
             <p class="post-comment-info post-meta"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
           </div>
-          {{ .body | markdownify | safeHTML }}
+         <div class="comment-body">{{ .body | markdownify | safeHTML }}</div> 
         </div>
       {{ end }}       
     {{ end }}
@@ -91,11 +91,11 @@
 <!-- Mastodon  powered-->
 
 {{ with .Params.comments }}
-<div class="article-content">
-  <h2>Comments</h2>
+<div class="staticman" role="complementary" id="Comments"> 
+  <h3> Mastodon Comments</h3>
   <p>You can use your Mastodon account to reply to this <a class="link" href="https://{{ .host }}/@{{ .username }}/{{ .id }}">post</a>.</p>
-  <p><a class="button" href="https://{{ .host }}/interact/{{ .id }}?type=reply">Reply</a></p>
-  <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
+  <p><a class="btn" href="https://{{ .host }}/interact/{{ .id }}?type=reply">Reply</a></p>
+  <p id="mastodon-comments-list" ><button id="load-comment" class="post-comments btn button">Load comments</button></p>
   <noscript><p>You need JavaScript to view the comments.</p></noscript>
   <script src="/dompurify/purify.min.js"></script>
   <script type="text/javascript">
@@ -107,8 +107,16 @@
            .replace(/"/g, "&quot;")
            .replace(/'/g, "&#039;");
    }
-
-    document.getElementById("load-comment").addEventListener("click", function() {
+   function isAdmin(unsafe){
+    if ( escapeHtml(unsafe) == {{ $.Site.Params.mastodon_admin_instance  }} ){
+      return "post-comment-admin";
+    }
+    else{
+      return "" ;
+    }
+   }
+    
+   document.getElementById("load-comment").addEventListener("click", function() {
       document.getElementById("load-comment").innerHTML = "Loading";
       fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}/context')
         .then(function(response) {
@@ -120,27 +128,31 @@
             data['descendants'].length > 0) {
               document.getElementById('mastodon-comments-list').innerHTML = "";
               data['descendants'].forEach(function(reply) {
+                
                 reply.account.display_name = escapeHtml(reply.account.display_name);
                 reply.account.emojis.forEach(emoji => {
                   reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
                     `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`);
                 });
                 mastodonComment =
-                  `<div class="mastodon-comment">
-                     <div class="avatar">
-                       <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
-                     </div>
-                     <div class="content">
-                       <div class="author">
+                  `<div class="post-comment ${isAdmin(escapeHtml(reply.account.url))}">
+                     <div class="post-comment-header ">
+                      
+                       <img class="post-comment-avatar" src="${escapeHtml(reply.account.avatar_static)}" height=100 width=100 alt="">
+                     
+                     <div class="content post-comment-info">
+                       <div class="post-comment-info post-meta">
                          <a href="${reply.account.url}" rel="nofollow">
-                           <span>${reply.account.display_name}</span>
+                           <strong>${reply.account.display_name}</strong>
                            <span class="disabled">${escapeHtml(reply.account.acct)}</span>
+                           <br>
                          </a>
                          <a class="date" href="${reply.uri}" rel="nofollow">
                            ${reply.created_at.substr(0, 10)}
                          </a>
                        </div>
-                       <div class="mastodon-comment-content">${reply.content}</div> 
+                      </div>
+                       <div class="comment-body">${reply.content}</div> 
                      </div>
                    </div>`;
                 document.getElementById('mastodon-comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true}));

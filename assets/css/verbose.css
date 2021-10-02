@@ -874,7 +874,7 @@ html {
 	height: 100%
 }
 
-img {
+article img {
 	width: auto;
 	height: auto
 }
@@ -1858,6 +1858,12 @@ html {
   margin-top: 20px;
   overflow: auto;
 }
+
+.post-comment-admin {
+    border: 5px;
+    border-color: var( --yellow);
+    border-style: solid;
+  }
 
 .post-comment-header {
   margin-bottom: 20px;
