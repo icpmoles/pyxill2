@@ -1,0 +1,25 @@
+{{ partial "head-amp.html" . }}
+{{ partial "amp-share.html" . }}
+</head>
+<body class="">
+
+<div class="site-wrap">
+  {{ partial "header-amp.html" . }}
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure" >
+      <div class="post-header mb2" >
+        <h1  class="py2">{{ .Title }}</h1>
+        <span class="post-meta" content={{ .Date.Format "2006-01-02" }} ><time datetime={{ .Date.Unix  }}  aria-label="Article published the {{ .Date.Format "02/01/2006"}}" >{{ .Date.Format "Jan 2, 2006" }} </time> by {{ .Params.author }}</span><br>
+        {{ $baseurl := .Site.BaseURL }}
+      </div>
+	
+      <article class="post-content" itemprop="articleBody">
+    {{ .Content}} 
+      </article>
+      {{ if isset .Params "tags" }}
+      <p class="post-meta">{{ i18n "tags" }}:{{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}tags/{{ . }}/">{{ . }}</a>{{ end }}</p>{{ end }}
+      {{ partial "comments-amp.html" . }}
+    </div>
+  </div>
+</div>
+

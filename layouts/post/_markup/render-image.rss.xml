@@ -1,2 +1,0 @@
-{{ $image := .Page.Resources.GetMatch .Destination }}
- <img alt="{{ .Text }}" src="{{  $image.Permalink  }}"  {{ with .Title}} title="{{ . }}"{{ end }} />
