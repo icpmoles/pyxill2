@@ -1068,13 +1068,14 @@ abbr {
 	cursor: help
 }
 
-code,
-pre {
+.highlight code,
+.highlight pre {
 	font-family: Cascadia Code, Menlo, Monaco, "Courier New", monospace;
 	overflow: auto;
 	/*max-width:  1000px;*/
 	background-color:#282a36;
 	overflow-y: hidden;
+	color: #fff;
 }
 
 
@@ -1103,7 +1104,7 @@ code {
 	
 }
 
-p code{
+code{
 	margin: 0;
 	color:#4c566a;
 	background: #eceff4;
@@ -1289,7 +1290,7 @@ h6 {
 	}
 
 	code{
-		margin: 10px;
+		margin: 10px auto;
 	}
 }
 
@@ -1332,7 +1333,7 @@ h6 {
 	}
 
 	code{
-		margin: 15px;
+		margin: 15px auto;
 	}
 
 }
