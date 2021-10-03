@@ -64,37 +64,13 @@
     <p>Nothing yet.</p>
   {{ end }}
   
-
-  <h3>Say something</h3>
-
-  <form class="post-new-comment" method="POST" action={{$.Site.Params.staticman_api}} aria-label="Add a comment">
-  <!--form class="post-new-comment" method="POST" action="http://localhost:8055/v2/entry/eduardoboucas/staticman-test/master/comments"-->
-    <input type="hidden" name="options[redirect]" value= "{{ .Site.BaseURL }}{{ .RelPermalink }}#comment-submitted">
-    <input type="hidden" name="options[entryTitle]" value="{{ .File.LogicalName}}" >	  
-    <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
-    <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" aria-label="Input area for your name" required="required">
-    <input name="fields[email]" type="email" class="post-comment-field email" placeholder="Your email address" aria-label="Input area for your email address" required="required"> 
-    <textarea name="fields[body]" class="post-comment-field" placeholder="Your message. Feel free to use Markdown." rows="10" aria-label="Input area for your comment" required="required"></textarea>
-    <input type="submit" class="post-comment-field btn pagination-item" value="Submit" aria-label="Button to submit your comment">
-  </form>
-</div>
-
-<div id="comment-submitted" class="dialog">
-	<h3>Thank you</h3>
-	  <p>Your comment has been submitted and will be displayed soon.</p>
-  	  <span><a href="#" class="btn pagination-item" >OK</a></span>
-
-</div>
-</div>
-{{ end }}
-{{ end }}
-<!-- Mastodon  powered-->
-
+<!-- Mastodon  Comments section -->
+  
 {{ with .Params.comments }}
 <div class="staticman" role="complementary" id="Comments"> 
-  <h3> Mastodon Comments</h3>
+ 
   <p>You can use your Mastodon account to reply to this <a class="link" href="https://{{ .host }}/@{{ .username }}/{{ .id }}">post</a>.</p>
-  <p><a class="btn" href="https://{{ .host }}/interact/{{ .id }}?type=reply">Reply</a></p>
+ 
   <p id="mastodon-comments-list" ><button id="load-comment" class="post-comments btn button">Load comments</button></p>
   <noscript><p>You need JavaScript to view the comments.</p></noscript>
   <script src="/dompurify/purify.min.js"></script>
@@ -165,3 +141,34 @@
   </script>
 </div>
 {{ end }}
+
+
+  <h3>Say something</h3>
+
+  <form class="post-new-comment" method="POST" action={{$.Site.Params.staticman_api}} aria-label="Add a comment">
+  <!--form class="post-new-comment" method="POST" action="http://localhost:8055/v2/entry/eduardoboucas/staticman-test/master/comments"-->
+    <input type="hidden" name="options[redirect]" value= "{{ .Site.BaseURL }}{{ .RelPermalink }}#comment-submitted">
+    <input type="hidden" name="options[entryTitle]" value="{{ .File.LogicalName}}" >	  
+    <input type="hidden" name="options[entryId]" value="{{ .File.UniqueID }}">
+    <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" aria-label="Input area for your name" required="required">
+    <input name="fields[email]" type="email" class="post-comment-field email" placeholder="Your email address" aria-label="Input area for your email address" required="required"> 
+    <textarea name="fields[body]" class="post-comment-field" placeholder="Your message. Feel free to use Markdown." rows="10" aria-label="Input area for your comment" required="required"></textarea>
+    <div class="flex-parent ">
+    <input type="submit" class="flex-child  btn pagination-item" value="Submit" aria-label="Button to submit your comment">
+    {{ with .Params.comments }}
+    <a class="flex-child  btn pagination-item" href="https://{{ .host }}/interact/{{ .id }}?type=reply">Reply with your Mastodon account &#128279;</a>
+    {{ end }}
+  </div>
+  </form>
+</div>
+
+<div id="comment-submitted" class="dialog">
+	<h3>Thank you</h3>
+	  <p>Your comment has been submitted and will be displayed soon.</p>
+  	  <span><a href="#" class="btn pagination-item" >OK</a></span>
+
+</div>
+</div>
+{{ end }}
+{{ end }}
+
