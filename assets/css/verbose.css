@@ -2182,7 +2182,7 @@ figcaption{
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-style: italic;
 	margin: auto;
-	background-color: var(--link-hover);
+	background-color: var(--button-background);
 	display: block;
 	float: left;
 	position: absolute;
@@ -2228,4 +2228,13 @@ figure:hover figcaption{
 	text-align: center;
 	flex: 1 1 150px;
 	border-radius: .6rem;
+}
+
+.footnote-ref {
+    margin-left: 0.2rem;
+}
+
+
+sup:target, li:target {
+    background: yellow
 }
