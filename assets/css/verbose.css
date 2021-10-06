@@ -123,7 +123,7 @@ small {
 	line-height: 1.5rem
 }
 
-@media screen and (min-width:48em) {
+@media screen and (min-width:36em) {
 	.h1 {
 		font-size: 4rem;
 		line-height: 5rem
@@ -147,7 +147,7 @@ small {
 	}
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:50em) {
 	.h1 {
 		font-size: 6rem;
 		line-height: 8rem
@@ -410,7 +410,7 @@ img {
 	padding-bottom: 1.5rem
 }
 
-@media screen and (min-width:48em) and (max-width:64em) {
+@media screen and (min-width:35em) and (max-width:50em) {
 	.m-responsive {
 		margin: 3rem
 	}
@@ -442,7 +442,7 @@ img {
 	}
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:50em) {
 	.m-responsive {
 		margin: 2rem
 	}
@@ -474,7 +474,7 @@ img {
 	}
 
 	.site-wrap{
-		max-width: 78rem;
+		max-width: 50rem;
 		margin: 0 auto;
 	}
 
@@ -529,7 +529,7 @@ img {
 	display: none
 }
 
-@media screen and (max-width:48em) {
+@media screen and (max-width:35em) {
 	.mobile-block,
 	.mobile-show {
 		display: block
@@ -1113,16 +1113,14 @@ code{
 }
 
 pre>code{
-	
 	display: block;
-
 }
 
 pre {
 	padding: 1.125em;
 	font-size: 1rem;
 	line-height: 1.11;
-
+	overflow: auto;
 }
 
 .highlight .p {
@@ -1198,7 +1196,7 @@ h6 {
 	top: .1em
 }
 
-@media screen and (min-width:48em) {
+@media screen and (min-width:36em) {
 	.site-header .site-title {
 		float: left
 	}
@@ -1244,7 +1242,7 @@ h6 {
 	}
 }
 
-@media screen and (max-width:48em) {
+@media screen and (max-width:35em) {
 	.h1,
 	h1 {
 		font-size: 2.827rem
@@ -1294,7 +1292,7 @@ h6 {
 	}
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:50em) {
 	.h1,
 	h1 {
 		font-size: 3.5rem
@@ -2187,11 +2185,11 @@ figcaption{
 	float: left;
 	position: absolute;
 	bottom: 0;
-	opacity: 0.6;
+	opacity: 1;
 	transition: transform .3s ease-in-out;
 }
 figure:hover figcaption{
-	opacity: 1
+	opacity: 0.2
 }
 
 .container {

@@ -1,6 +1,6 @@
 {{ $image := .Page.Resources.GetMatch .Destination }}
-<figure class="img-wrapper container"  style="width:{{$image.Width}}px" >
-
+<figure class="img-wrapper container picture"  style="width:{{$image.Width}}px" >
+{{ $used:= $image}}
     {{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
 
     {{ if ne $image.MediaType.SubType  "gif" }}
@@ -9,31 +9,34 @@
             {{ if hugo.IsExtended }} 
             <source srcset="{{ ($image.Resize "780x q95 webp" ).RelPermalink | safeURL }}" type="image/webp">
             {{ end }}
-            <source srcset="{{  ($image.Resize "780x jpg" ).RelPermalink | safeURL }}" type="image/jpeg">
+            {{$used = ($image.Resize "780x jpg" )}}
+            <source srcset="{{  ($used ).RelPermalink | safeURL }}" type="image/jpeg">
 
-            <source srcset="{{  ($image.Resize "780x" ).RelPermalink | safeURL }}" type="{{$image.MediaType}}">
+
             
         {{ else}}
             {{ if hugo.IsExtended }} 
             <source srcset="{{ ($image.Resize "x500 q90 webp" ).RelPermalink | safeURL }}" type="image/webp">
             {{ end }}
-            <source srcset="{{  ($image.Resize "x500 jpg" ).RelPermalink | safeURL }}" type="image/jpeg">
-            <source srcset="{{ ($image.Resize "x500" ).RelPermalink | safeURL }}" type="{{$image.MediaType}}">
+            {{$used = ($image.Resize "x500 jpg" )}}
+            <source srcset="{{  ($used ).RelPermalink | safeURL }}" type="image/jpeg">
+
+
         {{ end }}
 
     {{ end }}
-    <source srcset="{{ $image.RelPermalink | safeURL }}" type="{{$image.MediaType}}">
+    
 
    
     <img 
     class="post-img" 
-    src="{{ $image.RelPermalink | safeURL }}" 
+    src="{{ $used.RelPermalink | safeURL }}" 
     {{ with .Text}}  alt="{{ . }}" {{ end }} 
     {{ with .Title}} title="{{ . }}"{{ end }} 
     loading="lazy"
-     width="{{$image.Width}}" 
-     height="{{$image.Height}}"
-     type="{{$image.MediaType}}"
+     width="{{$used.Width}}" 
+     height="{{$used.Height}}"
+     type="image/jpeg"
      />
      <a href="{{ .Destination | safeURL }}" target="_blank"  class="fullscreen-container" aria-label="Fullscreen image"> </a>
      
