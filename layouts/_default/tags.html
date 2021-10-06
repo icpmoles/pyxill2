@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+<div class="site-wrap">
+    {{ partial "header.html" . }}
+    <div class="post p2 p-responsive wrap" role="main">
+        <div class="measure">
+          <div class="post-header mb2">
+            <h1 class="py2" itemscope="" itemtype="http://schema.org/WebPage" itemprop="name">{{ .Title }} </h1>
+          </div>
+          <ul>
+            {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+          {{ $tagCount := len $taxonomy.Pages }}
+         
+          <li><a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" >
+              {{ $name }}<tt>({{ $tagCount }})</tt>
+            </a></li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+    </div>
+    {{ partial "footer.html" . }}
+
+    
