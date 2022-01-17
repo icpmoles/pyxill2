@@ -1,5 +1,9 @@
 {{ $original := .Page.Resources.GetMatch (printf "%s*" (.Get 0) ) }}
-
-<a class="spotlight" href="{{ $original.RelPermalink | safeURL }}">
-    <img src="{{ ($original.Fill "200x200 smart" ).RelPermalink | safeURL }}">
+{{ $modified := ($original.Fit "250x250 jpg" ) }}
+<a class="spotlight-container" href="{{ $original.RelPermalink | safeURL }}">
+    <img class="spotlight" 
+    src="{{$modified.RelPermalink | safeURL }}"  
+    width="{{$modified.Width}}" 
+    height="{{$modified.Height}}" 
+    loading=lazy>
 </a>

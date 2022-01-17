@@ -2238,3 +2238,39 @@ figure:hover figcaption{
 sup:target, li:target {
     background: yellow
 }
+
+.spotlight-container{
+	 text-decoration: none; 
+/*	 min-width: 300px;   Or whatever */
+	margin: 1rem;
+
+	background: var(--form-background);
+	color: var(--sec-text);
+
+
+
+}
+
+.spotlight{
+	border-radius: 0.3rem;
+	border: 0.1rem solid var( --border-accent);
+}
+
+.gallery {
+	max-width: 100%;
+    display: flex;
+	flex-flow: row wrap;
+
+	/* Then we define how is distributed the remaining space */
+	justify-content: space-around;
+	align-content: stretch;
+    align-items: center;
+	
+    padding: 10px;
+    margin-top: 20px;
+    border: 0.2rem solid var( --form-accent);
+
+    background: var(--form-background);
+    color: var(--sec-text);
+    border-radius: 0.6rem;
+}
