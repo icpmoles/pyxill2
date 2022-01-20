@@ -1,22 +1,31 @@
 {{ $image := .Page.Resources.GetMatch .Destination }}
+
 {{ $used:= $image}}
 
-{{ $webpsrc := ($image.Fit "720x500 q95 webp" ).Permalink }}
-{{ $jpgsrc := (($image.Fit "720x500 jpg" )).Permalink }}
-{{ $webpsrc2 := ($image.Fit "1440x1000 q95 webp" ).Permalink }}
-{{ $jpgsrc2 := (($image.Fit "1440x1000 jpg" )).Permalink }}
-{{ $usedsrc:= $jpgsrc}}
+{{ $webpsrc := "" }}
+{{ $jpgsrc := "" }}
+{{ $webpsrc2 := "" }}
+{{ $jpgsrc2 := "" }}
+{{ $usedsrc:= $image }}
 
-
+{{ if ne $image.MediaType.SubType  "gif" }}
+{{ $webpsrc = ($image.Fit "720x500 q95 webp" ).Permalink }}
+{{ $jpgsrc = (($image.Fit "720x500 jpg" )).Permalink }}
+{{ $webpsrc2 = ($image.Fit "1440x1000 q95 webp" ).Permalink }}
+{{ $jpgsrc2 = (($image.Fit "1440x1000 jpg" )).Permalink }}
+{{ $usedsrc = $jpgsrc}}
+{{ else }}
+{{ $usedsrc = $image.Permalink  }}
+{{ end }}
 
 
 <figure class="img-wrapper container picture"  style="width:{{$image.Width}}px" >
    
-    {{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
- <picture>
-<source type="image/jpeg" srcset="{{ $jpgsrc }} 1x, {{ $jpgsrc2 }} 2x" >
+{{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
+<picture>
 
-<source type="image/webp" srcset="{{ $webpsrc }} 1x, {{ $webpsrc2 }} 2x " >
+{{ with $webpsrc }}<source type="image/webp" srcset="{{ . }} 1x , {{ $webpsrc2 }} 2x" > {{ end }}
+{{ with $jpgsrc }}<source type="image/jpeg" srcset="{{ $jpgsrc }} 1x, {{ $jpgsrc2 }} 2x" >{{ end }}
    
     <img 
     class="post-img" 
