@@ -1,45 +1,35 @@
 {{ $image := .Page.Resources.GetMatch .Destination }}
-<figure class="img-wrapper container picture"  style="width:{{$image.Width}}px" >
 {{ $used:= $image}}
+
+{{ $webpsrc := ($image.Fit "720x500 q95 webp" ).Permalink }}
+{{ $jpgsrc := (($image.Fit "720x500 jpg" )).Permalink }}
+{{ $webpsrc2 := ($image.Fit "1440x1000 q95 webp" ).Permalink }}
+{{ $jpgsrc2 := (($image.Fit "1440x1000 jpg" )).Permalink }}
+{{ $usedsrc:= $jpgsrc}}
+
+
+
+
+<figure class="img-wrapper container picture"  style="width:{{$image.Width}}px" >
+   
     {{ with .Title}}   <div class="title-img">{{ . }}</div> {{ end }}
+ <picture>
+<source type="image/jpeg" srcset="{{ $jpgsrc }} 1x, {{ $jpgsrc2 }} 2x" >
 
-    {{ if ne $image.MediaType.SubType  "gif" }}
-
-        {{ if gt $image.Width 780 }}
-            {{ if hugo.IsExtended }} 
-            <source srcset="{{ ($image.Resize "780x q95 webp" ).RelPermalink | safeURL }}" type="image/webp">
-            {{ end }}
-            {{$used = ($image.Resize "780x jpg" )}}
-            <source srcset="{{  ($used ).RelPermalink | safeURL }}" type="image/jpeg">
-
-
-            
-        {{ else}}
-            {{ if hugo.IsExtended }} 
-            <source srcset="{{ ($image.Resize "x500 q90 webp" ).RelPermalink | safeURL }}" type="image/webp">
-            {{ end }}
-            {{$used = ($image.Resize "x500 jpg" )}}
-            <source srcset="{{  ($used ).RelPermalink | safeURL }}" type="image/jpeg">
-
-
-        {{ end }}
-
-    {{ end }}
-    
-
+<source type="image/webp" srcset="{{ $webpsrc }} 1x, {{ $webpsrc2 }} 2x " >
    
     <img 
     class="post-img" 
-    src="{{ $used.RelPermalink | safeURL }}" 
+    src="{{ $usedsrc }}" 
     {{ with .Text}}  alt="{{ . }}" {{ end }} 
     {{ with .Title}} title="{{ . }}"{{ end }} 
     loading="lazy"
-     width="{{$used.Width}}" 
-     height="{{$used.Height}}"
-     type="image/jpeg"
-     />
+    width="{{$used.Width}}" 
+    height="{{$used.Height}}"
+     >
+   </picture>
      <a href="{{ .Destination | safeURL }}" target="_blank"  class="fullscreen-container" aria-label="Fullscreen image"> </a>
-     
-    {{ with .Text}}   <figcaption class="small" style="width:{{$image.Width}}px"> {{ . }}</figcaption> {{ end }}
+ 
+     {{ with .Text}}   <figcaption class="small" style="width:{{$image.Width}}px"> {{ . }}</figcaption> {{ end }}
 </figure>
 
