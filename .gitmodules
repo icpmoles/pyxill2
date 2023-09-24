@@ -1,0 +1,3 @@
+[submodule "assets/eva-icons"]
+	path = assets/eva-icons
+	url = https://github.com/akveo/eva-icons/
