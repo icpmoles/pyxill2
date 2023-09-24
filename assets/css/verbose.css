@@ -2274,3 +2274,10 @@ sup:target, li:target {
     color: var(--sec-text);
     border-radius: 0.6rem;
 }
+
+.social-name{ 
+	position: absolute;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
+	
+}
