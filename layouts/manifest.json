@@ -1,5 +1,5 @@
 {
-    "name": {{ .Site.Title }},
+    "name": {{ .Site.Title | plainify  }},
     "short_name": "Moles",
     "icons": [
         {

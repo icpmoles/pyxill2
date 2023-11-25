@@ -1,4 +1,30 @@
 @charset "UTF-8";
+
+
+@font-face {
+	font-family: "FiraMath";
+	src:
+	  url("/fonts/FiraMath.otf") format("opentype") 
+}
+@font-face {
+	font-family: "Asana";
+	src:
+	  url("/fonts/Asana.otf") format("opentype") 
+}
+@font-face {
+	font-family: "FSNeohellenicMath";
+	src:
+	  url("/fonts/FSNeohellenicMath.otf") format("opentype") 
+}
+
+@font-face {
+	font-family: "TexGyreSchola";
+	src:
+	  url("/fonts/texgyreschola-regular.otf") format("opentype") 
+}
+
+FSNeohellenicMath
+
 .italic,
 .meta,
 .post-meta,
@@ -2281,3 +2307,20 @@ sup:target, li:target {
 	white-space: nowrap;
 	
 }
+/*
+math {
+	padding: 1rem;
+    overflow: auto hidden;
+	font-family:"TexGyreSchola", FSNeohellenicMath,Asana, FiraMath,  math,sans-serif,serif;
+	color: var(--sec-text);
+	
+}
+
+
+*/
+.katex-display { overflow: auto hidden }
+.katex-display > .katex { white-space: normal }
+/* Add space between broken lines: */
+.katex-display > .base { margin: 0.25em 0 }
+/* Compensate by reducing space around display math */
+.katex-display { margin: 0.5em 0; }
