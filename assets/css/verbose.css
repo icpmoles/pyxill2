@@ -23,7 +23,12 @@
 	  url("/fonts/texgyreschola-regular.otf") format("opentype") 
 }
 
-FSNeohellenicMath
+@font-face {
+	font-family: "STIXTwo";
+	src:
+	  url("/fonts/STIXTwoMath-Regular.otf") format("opentype") 
+}
+
 
 .italic,
 .meta,
@@ -2307,17 +2312,17 @@ sup:target, li:target {
 	white-space: nowrap;
 	
 }
-/*
+
 math {
 	padding: 1rem;
     overflow: auto hidden;
 	font-family:"TexGyreSchola", FSNeohellenicMath,Asana, FiraMath,  math,sans-serif,serif;
 	color: var(--sec-text);
-	
+	max-width: 100%;
 }
 
 
-*/
+
 .katex-display { overflow: auto hidden }
 .katex-display > .katex { white-space: normal }
 /* Add space between broken lines: */
